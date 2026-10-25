@@ -63,3 +63,48 @@ Bron: [leukerecepten.nl](https://www.leukerecepten.nl/recepten/kikkererwten-curr
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Aardappelcurry met ei en sperziebonen
+
+![Aardappelcurry met ei](https://api-recepten.voedingscentrum.nl/api/recipeimage/537ff763-a98c-4071-b596-987d59cb53b0/jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 2 | 30 min | | hoofdgerecht · vegetarisch · curry · zoutarm · lactosevrij |
+
+Kruidige curry van aardappel en hardgekookt ei met kerrie, gember en rode peper, met sperziebonen erbij.
+
+Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept/aardappelcurry-met-ei-en-sperziebonen.aspx)
+
+### Ingrediënten
+
+- 4 eieren
+- 600 g aardappelen
+- 1 ui
+- 15 g gember
+- 1 rode peper
+- 400 g sperziebonen
+- 1 el olie
+- 1 el kerriepoeder
+- ½ (groente)bouillontablet met minder zout
+- 100 ml water
+- 2 el kokosmelk light
+
+### Bereiding
+
+1. Kook de eieren in 8–10 minuten hard.
+2. Schil de aardappelen, snijd in blokjes en kook ze in weinig water 5 minuten.
+3. Snipper de ui, rasp de gember, snijd de peper in reepjes en maak de sperziebonen schoon.
+4. Fruit ui en gember met het kerriepoeder in de olie tot het geurt.
+5. Voeg aardappel, peper, het halve bouillontablet en het water toe. Breng aan de kook en laat 10 minuten zacht stoven.
+6. Kook intussen de sperziebonen in weinig water in 8 minuten beetgaar.
+7. Pel de eieren, snijd ze in parten en roer ze met de kokosmelk door de curry. Even goed warm laten worden.
+8. Serveer met de sperziebonen.
+
+### Tips
+
+- In plaats van sperziebonen: bloemkool, broccoli, gebakken spinazie of paksoi.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
