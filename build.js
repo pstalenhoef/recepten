@@ -239,7 +239,10 @@ cook.onclick = async () => {
     return;
   }
   cooking = !cooking;
-  if (cooking) await requestLock(); else if (lock) await lock.release();
+  if (cooking) {
+    await requestLock();
+    if (!lock) { cooking = false; alert("Het scherm aan houden lukte niet (bijv. door batterijbesparing)."); }
+  } else if (lock) await lock.release();
   cook.classList.toggle("on", cooking);
   cook.textContent = cooking ? "🍳 Kookstand aan" : "🍳 Kookstand";
 };
