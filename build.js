@@ -80,6 +80,7 @@ const html = `<!doctype html>
             text-decoration: none; }
   .ah-btn svg { flex: none; }
   .ah-btn.off { opacity: .4; pointer-events: none; }
+  .sec-ingredienten li.no-ah span { font-style: italic; }
   .ah-hint { font-size: .8rem; color: var(--muted); text-align: center; margin: 6px 0 0; }
 
   .sec-bereiding ol { counter-reset: step; }
@@ -215,12 +216,18 @@ for (const [h2, ...rest] of groups) {
   const ingr = cols.querySelector(".sec-ingredienten");
   if (ingr && ingr.querySelector("li[data-ah]")) {
     const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
-    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst uit wat je al in huis hebt.";
+    const hint = el("p", "ah-hint");
+    // Ingrediënten zonder AH-product (olie, zout, ...) gaan niet mee; markeren en noemen
+    ingr.querySelectorAll("li:not([data-ah])").forEach(li => li.classList.add("no-ah"));
     const update = () => {
-      const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => li.querySelector("input").checked);
+      const checked = [...ingr.querySelectorAll("li")].filter(li => li.querySelector("input").checked);
+      const items = checked.filter(li => li.dataset.ah);
+      const skipped = checked.filter(li => !li.dataset.ah).map(li => li.textContent.trim());
       btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + items.map(li => "p=" + li.dataset.ah).join("&");
       btn.innerHTML = CART + "<span>Op mijn AH-lijstje (" + items.length + ")</span>";
       btn.classList.toggle("off", !items.length);
+      hint.textContent = "Vink eerst uit wat je al in huis hebt." +
+        (skipped.length ? " Zonder AH-product, gaat niet mee: " + skipped.join(" · ") : "");
     };
     ingr.addEventListener("change", update); update();
     ingr.append(btn, hint);
