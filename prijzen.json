@@ -1,0 +1,241 @@
+{
+ "date": "2026-10-26",
+ "items": {
+  "58082": {
+   "p": 2.6,
+   "n": "AH Biologisch Roomboter ongezouten"
+  },
+  "60604": {
+   "p": 5.39,
+   "n": "AH Biologisch Olijfolie extra vierge"
+  },
+  "66113": {
+   "p": 1.43,
+   "n": "AH Biologisch Doperwten"
+  },
+  "67739": {
+   "p": 3.05,
+   "n": "AH Biologisch Cherrytomaten"
+  },
+  "101206": {
+   "p": 1.25,
+   "n": "AH Biologisch Kristalsuiker"
+  },
+  "104818": {
+   "p": 1.97,
+   "n": "AH Biologisch Gember"
+  },
+  "105318": {
+   "p": 1.25,
+   "n": "AH Biologisch Tarwebloem"
+  },
+  "127231": {
+   "p": 2.51,
+   "n": "AH Biologisch Eieren S M L"
+  },
+  "127726": {
+   "p": 2.06,
+   "n": "AH Biologisch Vastkokende aardappelen"
+  },
+  "128874": {
+   "p": 1.34,
+   "n": "AH Biologisch Paprika rood"
+  },
+  "140615": {
+   "p": 0.75,
+   "n": "AH Taco seasoning mix"
+  },
+  "168206": {
+   "p": 2.49,
+   "n": "AH Spaghetti all' uovo"
+  },
+  "168813": {
+   "p": 1.16,
+   "n": "AH Terra Biologisch kikkererwten"
+  },
+  "168814": {
+   "p": 0.89,
+   "n": "AH Terra Biologisch kidneybonen"
+  },
+  "185202": {
+   "p": 1.12,
+   "n": "AH Biologisch Courgette"
+  },
+  "185774": {
+   "p": 1.34,
+   "n": "AH Biologisch Knoflook"
+  },
+  "197309": {
+   "p": 1.79,
+   "n": "AH Biologisch Basilicum pot"
+  },
+  "197971": {
+   "p": 0.69,
+   "n": "AH Kaneel gemalen"
+  },
+  "197972": {
+   "p": 0.59,
+   "n": "AH Kerrie gemalen"
+  },
+  "197977": {
+   "p": 0.79,
+   "n": "AH Paprika mild gemalen"
+  },
+  "199231": {
+   "p": 1.79,
+   "n": "AH Biologisch Mayonaise zacht en romig"
+  },
+  "199252": {
+   "p": 2.39,
+   "n": "Fairtrade Original Kruidenpasta rode curry"
+  },
+  "199921": {
+   "p": 1.52,
+   "n": "AH Biologisch Groene pesto"
+  },
+  "215244": {
+   "p": 1.69,
+   "n": "Maggi Groente bouillon minder zout"
+  },
+  "216611": {
+   "p": 2.49,
+   "n": "Verstegen Peterselie"
+  },
+  "230802": {
+   "p": 1.79,
+   "n": "AH Biologisch Koriander pot"
+  },
+  "232017": {
+   "p": 2.79,
+   "n": "AH Mozzarella geraspt"
+  },
+  "234759": {
+   "p": 3.39,
+   "n": "Verstegen Chili vlokken"
+  },
+  "235203": {
+   "p": 2.42,
+   "n": "AH Biologisch Spinazie"
+  },
+  "238911": {
+   "p": 2.07,
+   "n": "AH Biologisch Italiaanse mozzarella"
+  },
+  "238913": {
+   "p": 5.93,
+   "n": "AH Biologisch Parmigiano reggiano"
+  },
+  "238972": {
+   "p": 1.29,
+   "n": "AH Rozemarijn"
+  },
+  "239244": {
+   "p": 1.52,
+   "n": "AH Biologisch Aubergine"
+  },
+  "378706": {
+   "p": 0.76,
+   "n": "AH Terra Plantaardige soja gurt ongezoet"
+  },
+  "387770": {
+   "p": 0.49,
+   "n": "AH Rode peper"
+  },
+  "389076": {
+   "p": 2.69,
+   "n": "AH Biologisch Trostomaten"
+  },
+  "400469": {
+   "p": 2.96,
+   "n": "AH Biologisch Ricotta"
+  },
+  "401080": {
+   "p": 3.14,
+   "n": "Santa Maria Tortilla wraps organic bio 8x medium"
+  },
+  "404122": {
+   "p": 1.29,
+   "n": "AH Oregano"
+  },
+  "409995": {
+   "p": 1.21,
+   "n": "AH Biologisch Sperziebonen"
+  },
+  "414999": {
+   "p": 3.99,
+   "n": "La Morena Diced chipotle pepper"
+  },
+  "415248": {
+   "p": 2.69,
+   "n": "AH Biologisch Paprika duo"
+  },
+  "436753": {
+   "p": 8.09,
+   "n": "AH Biologisch Rundergehakt 500g"
+  },
+  "449714": {
+   "p": 2.42,
+   "n": "Go-Tan Biologische kokosmelk"
+  },
+  "476742": {
+   "p": 1.25,
+   "n": "AH Biologisch Rucola"
+  },
+  "478232": {
+   "p": 2.79,
+   "n": "AH Tex-mex geraspte kaas"
+  },
+  "497552": {
+   "p": 2.33,
+   "n": "AH Biologisch Griekse feta"
+  },
+  "506228": {
+   "p": 1.36,
+   "n": "AH Zuivelspread naturel"
+  },
+  "509631": {
+   "p": 0.99,
+   "n": "AH Kookroom"
+  },
+  "525268": {
+   "p": 2.69,
+   "n": "AH Biologisch Tagliatelle volkoren"
+  },
+  "525845": {
+   "p": 0.98,
+   "n": "AH Biologisch Rode uien"
+  },
+  "525848": {
+   "p": 0.8,
+   "n": "AH Biologisch Gele uien"
+  },
+  "547010": {
+   "p": 3.05,
+   "n": "AH Biologisch Cashewnoten gezouten"
+  },
+  "556739": {
+   "p": 0.62,
+   "n": "AH Biologisch Tomatenpuree"
+  },
+  "577892": {
+   "p": 1.43,
+   "n": "AH Biologisch Citroenen"
+  },
+  "582492": {
+   "p": 1.69,
+   "n": "AH Zoete aardappelblokjes"
+  },
+  "583799": {
+   "p": 0.89,
+   "n": "AH Biologisch Maiskorrels 0% zout toegevoegd"
+  },
+  "585661": {
+   "p": 2.51,
+   "n": "AH Terra Biologisch zwarte bonen"
+  },
+  "592089": {
+   "p": 1.07,
+   "n": "AH Biologisch Kokosmelk light 6% vet"
+  }
+ }
+}

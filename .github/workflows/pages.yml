@@ -30,6 +30,7 @@ jobs:
           node build.js
           mkdir site
           cp index.html site/
+          if [ -f prijzen.json ]; then cp prijzen.json site/; fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

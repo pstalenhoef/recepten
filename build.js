@@ -6,6 +6,10 @@ const path = require("path");
 const md = fs.readFileSync(path.join(__dirname, "recepten.md"), "utf8");
 // Veilig insluiten in een <script>: geen "</script>" of "<!--" laten staan.
 const embedded = JSON.stringify(md).replace(/</g, "\\u003c");
+// prijzen.json: { "date": "JJJJ-MM-DD", "items": { "<productnummer>": { "p": prijs, "n": naam } } }
+const pricesFile = path.join(__dirname, "prijzen.json");
+const pricesEmbedded = JSON.stringify(fs.existsSync(pricesFile)
+  ? JSON.parse(fs.readFileSync(pricesFile, "utf8")) : { date: "", items: {} }).replace(/</g, "\\u003c");
 
 const html = `<!doctype html>
 <html lang="nl">
@@ -98,6 +102,16 @@ const html = `<!doctype html>
                     cursor: pointer; padding: 0; }
   .persons b { min-width: 1.2em; text-align: center; }
   .ah-hint { font-size: .8rem; color: var(--muted); text-align: center; margin: 6px 0 0; }
+  .price { margin-top: 12px; }
+  .price-btns { display: flex; gap: 8px; }
+  .price-btns button { flex: 1; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line); cursor: pointer;
+                       background: var(--card); color: var(--ink); font: 600 .85rem Inter, system-ui, sans-serif; }
+  .price-out { margin: 8px 0 0; font-size: .9rem; text-align: center; min-height: 1.2em; }
+  .price-out small { display: block; color: var(--muted); font-size: .75rem; margin-top: 2px; }
+  .spinner { display: inline-block; width: 14px; height: 14px; margin-right: 8px; vertical-align: -2px;
+             border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%;
+             animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
   .sec-bereiding ol { counter-reset: step; }
   .sec-bereiding li { list-style: none; counter-increment: step; position: relative;
@@ -139,6 +153,13 @@ const html = `<!doctype html>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script>
 const MD = ${embedded};
+// Prijzen: actuele versie uit prijzen.json (naast de pagina), met de ingebakken kopie als terugval
+const PRIJZEN = ${pricesEmbedded};
+let pricesP = null;
+const loadPrices = () => pricesP ??= fetch("prijzen.json", { cache: "no-cache" })
+  .then(r => r.ok ? r.json() : PRIJZEN).catch(() => PRIJZEN);
+const eur = v => "€ " + v.toFixed(2).replace(".", ",");
+const fmtDate = s => s ? s.split("-").reverse().join("-") : "onbekende datum";
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "")
                    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const CART = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" ' +
@@ -302,12 +323,10 @@ for (const [h2, ...rest] of groups) {
     const span = el("span"); span.append(...li.childNodes); label.append(cb, span); li.append(label);
   });
 
-  let factor = 1;
+  let factor = 1, curPersons = basePersons || 1;
   const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
-  // Knop: aangevinkte ingrediënten op het AH-lijstje, met aantal verpakkingen per product
-  const update = () => {
-    if (!ingr) return;
-    const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => li.querySelector("input").checked);
+  // Aantal verpakkingen per AH-product voor deze ingrediënten (opgeteld per product)
+  const packages = items => {
     const per = new Map(); // productnummer -> { sum (in verpakkingseenheid), min (vast aantal) }
     for (const li of items) {
       const d = li.dataset, q = li.querySelector(".qty"), e = per.get(d.ah) || { sum: 0, min: 0, pack: +d.pack };
@@ -315,8 +334,14 @@ for (const [h2, ...rest] of groups) {
       else e.min = Math.max(e.min, +d.fixed || 1);
       per.set(d.ah, e);
     }
-    const parts = [...per].map(([id, e]) =>
-      "p=" + id + ":" + Math.max(1, e.min, e.sum ? Math.ceil(e.sum / (e.pack * PACK_SLACK)) : 0));
+    return new Map([...per].map(([id, e]) =>
+      [id, Math.max(1, e.min, e.sum ? Math.ceil(e.sum / (e.pack * PACK_SLACK)) : 0)]));
+  };
+  // Knop: aangevinkte ingrediënten op het AH-lijstje, met aantal verpakkingen per product
+  const update = () => {
+    if (!ingr) return;
+    const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => li.querySelector("input").checked);
+    const parts = [...packages(items)].map(([id, n]) => "p=" + id + ":" + n);
     btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + parts.join("&");
     btn.innerHTML = CART + "<span>Op mijn AH-lijstje (" + items.length + ")</span>";
     btn.classList.toggle("off", !items.length);
@@ -326,7 +351,30 @@ for (const [h2, ...rest] of groups) {
     hint.textContent = "Vink eerst uit wat je al in huis hebt." +
       (ingr.querySelector("li[data-pantry='1']") ? " Voorraad (olie, kruiden, ...) staat uit; vink aan als het op is." : "");
     ingr.addEventListener("change", update); update();
-    ingr.append(btn, hint);
+
+    // Prijs: totaal en per persoon, voor de aangevinkte of alle ingrediënten (prijzen per verpakking)
+    const price = el("div", "price");
+    price.innerHTML = '<div class="price-btns"><button type="button" title="Prijs van de aangevinkte ingrediënten">' +
+      '€ Geselecteerd</button><button type="button" data-all="1" title="Prijs van alle ingrediënten">€ Alles</button></div>' +
+      '<p class="price-out" aria-live="polite"></p>';
+    const out = price.querySelector(".price-out");
+    price.querySelectorAll("button").forEach(b => b.addEventListener("click", async () => {
+      const all = !!b.dataset.all;
+      out.innerHTML = '<span class="spinner" aria-hidden="true"></span>Prijzen ophalen…';
+      const prices = await loadPrices();
+      const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => all || li.querySelector("input").checked);
+      let total = 0, missing = 0;
+      for (const [id, n] of packages(items)) {
+        const p = prices.items[id];
+        if (p) total += n * p.p; else missing++;
+      }
+      out.innerHTML = "<b></b><small></small>";
+      out.querySelector("b").textContent = (all ? "Alles: " : "Geselecteerd: ") + eur(total) +
+        " totaal · " + eur(total / curPersons) + " per persoon";
+      out.querySelector("small").textContent = curPersons + " personen, hele verpakkingen, AH-prijzen van " +
+        fmtDate(prices.date) + (missing ? "; " + missing + " product(en) zonder prijs" : "") + ".";
+    }));
+    ingr.append(btn, hint, price);
   }
 
   // Aantal personen: hoeveelheden en aantallen voor het AH-lijstje meeschalen
@@ -334,7 +382,7 @@ for (const [h2, ...rest] of groups) {
     let n = basePersons;
     const [minus, plus] = persons.querySelectorAll("button");
     const set = v => {
-      n = Math.min(20, Math.max(1, v)); factor = n / basePersons;
+      n = Math.min(20, Math.max(1, v)); factor = n / basePersons; curPersons = n;
       persons.querySelector("b").textContent = n;
       art.querySelectorAll(".qty").forEach(q => {
         if (!("orig" in q.dataset)) q.dataset.orig = q.textContent;
