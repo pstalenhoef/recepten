@@ -20,7 +20,9 @@ Bron: [site](url)    (wordt getoond als "Recept van …", op de foto en onderaan
                      {ah:127231@6st} (st = stuks; bij knoflook tenen). Het nummer staat in de AH-productlink
                      na "wi". Het aantal verpakkingen volgt uit hoeveelheid en verpakking; zonder @ of bij
                      een andere eenheid (el, handje) gaat er 1 mee, of het vaste aantal van {ah:nr:aantal}.
-                     Ingrediënten zonder {ah:...} gaan niet mee en zijn niet aan te vinken.
+                     Voorraad (olie, gedroogde kruiden, bloem, boter, suiker): " voorraad" achter de code,
+                     bijv. {ah:60604 voorraad}; aan te vinken maar staat standaard uit.
+                     Alleen water, zout en peper e.d. krijgen geen code: die zijn gewone tekst.
 ### Bereiding         (genummerde lijst; hoeveelheden tussen {} schalen mee, bijv. {600 g}, {2 el}, {4};
                      tijden en temperaturen zonder {})
 ### Tips              (optioneel)
@@ -50,7 +52,7 @@ Bron: [leukerecepten.nl](https://www.leukerecepten.nl/recepten/kikkererwten-curr
 - 2 tenen knoflook {ah:185774@20st}
 - 200 g spinazie {ah:235203@200g}
 - 4 el (plantaardige) yoghurt {ah:378706}
-- olie om in te bakken
+- olie om in te bakken {ah:60604 voorraad}
 
 ### Bereiding
 
@@ -92,8 +94,8 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 - 15 g gember {ah:104818@150g}
 - 1 rode peper {ah:387770@3st}
 - 400 g sperziebonen {ah:409995@450g}
-- 1 el olie
-- 1 el kerriepoeder {ah:197972}
+- 1 el olie {ah:60604 voorraad}
+- 1 el kerriepoeder {ah:197972 voorraad}
 - ½ (groente)bouillontablet met minder zout {ah:215244@8st}
 - 100 ml water
 - 2 el kokosmelk light {ah:592089}
@@ -139,7 +141,7 @@ Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/taglia
 - 125 g mozzarella {ah:238911@125g}
 - 85 g groene pesto {ah:199921@135g}
 - 60 g rucola {ah:476742@40g}
-- 2 el milde olijfolie
+- 2 el milde olijfolie {ah:60604 voorraad}
 
 ### Bereiding
 
@@ -180,12 +182,12 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 
 #### Kruidenolie
 
-- 6 el olijfolie
+- 6 el olijfolie {ah:60604 voorraad}
 - 2 takjes rozemarijn, blaadjes fijngehakt {ah:238972}
 - 3 tenen knoflook, geraspt {ah:185774@20st}
-- 1 tl paprikapoeder
-- 1 tl kerriepoeder
-- ½ tl kaneel
+- 1 tl paprikapoeder {ah:197977 voorraad}
+- 1 tl kerriepoeder {ah:197972 voorraad}
+- ½ tl kaneel {ah:197971 voorraad}
 - snuf zwarte peper
 
 #### Knoflookmayonaise
@@ -193,7 +195,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 - 5 el mayonaise {ah:199231}
 - 1 teen knoflook, geraspt {ah:185774@20st}
 - 1 el citroensap {ah:577892}
-- 1 tl gedroogde peterselie
+- 1 tl gedroogde peterselie {ah:216611 voorraad}
 - flinke snuf zwarte peper en een snufje zout
 
 #### Afmaken
@@ -201,7 +203,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 - 100 g feta, verkruimeld {ah:497552@150g}
 - handje rucola {ah:476742@40g}
 - snuf zeezout
-- snuf pul biber of chilivlokken
+- snuf pul biber of chilivlokken {ah:234759 voorraad}
 
 ### Bereiding
 
@@ -249,7 +251,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 - 50 g geraspte Tex Mex kaas {ah:478232@150g}
 - 1 el chipotle peper {ah:414999}
 - 2,5 el tacokruiden {ah:140615}
-- scheutje olie
+- scheutje olie {ah:60604 voorraad}
 - snuf zwarte peper en zout
 
 #### Wraps
@@ -257,7 +259,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 - 8 medium wraps {ah:401080@8st}
 - 100 g geraspte Tex Mex kaas {ah:478232@150g}
 - 10 g koriander, grof gehakt {ah:230802@9g}
-- snufje chilivlokken
+- snufje chilivlokken {ah:234759 voorraad}
 
 ### Bereiding
 
@@ -298,7 +300,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/aubergine-rolletjes-in
 #### Aubergine
 
 - 2 aubergines {ah:239244@1st}
-- olijfolie om te bestrijken
+- olijfolie om te bestrijken {ah:60604 voorraad}
 
 #### Ricottavulling
 
@@ -308,7 +310,7 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/aubergine-rolletjes-in
 - 1 teen knoflook, geraspt {ah:185774@20st}
 - 10 g verse basilicum, fijngehakt {ah:197309}
 - ½ citroen, alleen de rasp {ah:577892@3st}
-- ½ tl chilivlokken (naar keuze)
+- ½ tl chilivlokken (naar keuze) {ah:234759 voorraad}
 - snuf zwarte peper en zout
 
 #### Tomatensaus
@@ -317,12 +319,12 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/aubergine-rolletjes-in
 - 2 rode uien, gesnipperd {ah:525845@4st}
 - 3 tenen knoflook, geraspt {ah:185774@20st}
 - 70 g tomatenpuree {ah:556739@140g}
-- 2 tl gedroogde oregano
-- ⅓ tl chilivlokken
-- ½ tl suiker
+- 2 tl gedroogde oregano {ah:404122 voorraad}
+- ⅓ tl chilivlokken {ah:234759 voorraad}
+- ½ tl suiker {ah:101206 voorraad}
 - 100 ml water
 - 10 g verse basilicum, grof gehakt {ah:197309}
-- scheutje olijfolie
+- scheutje olijfolie {ah:60604 voorraad}
 - snuf zwarte peper en zout
 
 #### Topping
@@ -375,8 +377,8 @@ Bron: [mindyourfeed.nl](https://www.mindyourfeed.nl/recepten/diner/pasta-met-cit
 - 1 citroen {ah:577892@3st}
 - 150 ml kookroom {ah:509631@250ml}
 - 75 g Parmezaanse kaas, geraspt, plus extra om af te maken {ah:238913@145g}
-- 1 el bloem
-- klontje boter
+- 1 el bloem {ah:105318 voorraad}
+- klontje boter {ah:58082 voorraad}
 - snuf peper
 
 ### Bereiding

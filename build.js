@@ -277,12 +277,14 @@ for (const [h2, ...rest] of groups) {
 
   const ingr = cols.querySelector(".sec-ingredienten");
   cols.querySelectorAll(".sec-ingredienten li").forEach(li => {
-    // {ah:nr}, {ah:nr:aantal} of {ah:nr@verpakking} (bijv. @330g, @400ml, @6st) -> data-*, niet tonen
+    // {ah:nr}, {ah:nr:aantal} of {ah:nr@verpakking} (bijv. @330g, @400ml, @6st) -> data-*, niet tonen;
+    // met " voorraad" erachter (olie, kruiden, bloem, ...) staat het vinkje standaard uit
     const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
     for (let n; (n = walker.nextNode());)
-      n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?(?:@(\\d+(?:[.,]\\d+)?)(g|ml|st))?\\}/,
-        (_, id, fixed, pack, packUnit) => {
-          Object.assign(li.dataset, { ah: id, fixed: fixed || "", pack: pack ? num(pack) : "", packUnit: packUnit || "" });
+      n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?(?:@(\\d+(?:[.,]\\d+)?)(g|ml|st))?(\\s+voorraad)?\\}/,
+        (_, id, fixed, pack, packUnit, pantry) => {
+          Object.assign(li.dataset, { ah: id, fixed: fixed || "", pack: pack ? num(pack) : "", packUnit: packUnit || "",
+            pantry: pantry ? "1" : "" });
           return "";
         });
     // Hoeveelheid vooraan ("300 g", "½", "2,5 el") in een span zetten zodat die kan meeschalen
@@ -296,7 +298,7 @@ for (const [h2, ...rest] of groups) {
     }
     if (!li.dataset.ah) { li.classList.add("no-ah"); return; } // gaat niet mee: gewoon tekst
     // Standaard aangevinkt (= nodig); uitvinken = al in huis, doorgestreept
-    const label = el("label"); const cb = el("input"); cb.type = "checkbox"; cb.checked = true;
+    const label = el("label"); const cb = el("input"); cb.type = "checkbox"; cb.checked = !li.dataset.pantry;
     const span = el("span"); span.append(...li.childNodes); label.append(cb, span); li.append(label);
   });
 
@@ -320,7 +322,9 @@ for (const [h2, ...rest] of groups) {
     btn.classList.toggle("off", !items.length);
   };
   if (ingr && ingr.querySelector("li[data-ah]")) {
-    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst uit wat je al in huis hebt.";
+    const hint = el("p", "ah-hint");
+    hint.textContent = "Vink eerst uit wat je al in huis hebt." +
+      (ingr.querySelector("li[data-pantry='1']") ? " Voorraad (olie, kruiden, ...) staat uit; vink aan als het op is." : "");
     ingr.addEventListener("change", update); update();
     ingr.append(btn, hint);
   }
