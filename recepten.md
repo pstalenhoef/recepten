@@ -214,3 +214,63 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Mexicaanse wraps uit de oven
+
+![Mexicaanse wraps uit de oven](https://fodk.s3.eu-central-1.amazonaws.com/wp-content/uploads/2026/10/01074849/mexicaanse-wraps-uit-de-oven-met-gehakt-en-bonen-scaled.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 30 min | Mexicaans | hoofdgerecht · ovenschotel · vlees |
+
+Wraps gevuld met gekruid gehakt, bonen, mais en paprika, met kaas gegratineerd in de oven.
+
+Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-de-oven/)
+
+### Ingrediënten
+
+#### Vulling
+
+- 500 g rundergehakt {ah:436753}
+- 380 g kidneybonen, uitgelekt {ah:168814}
+- 380 g zwarte bonen, uitgelekt {ah:585661}
+- 150 g mais, uitgelekt {ah:583799}
+- 1 paprika, in blokjes {ah:128874}
+- 1 ui, gesnipperd {ah:525848}
+- 3 tenen knoflook, geraspt {ah:185774}
+- 70 g tomatenpuree {ah:556739}
+- 75 g zuivelspread {ah:506228}
+- 50 g geraspte Tex Mex kaas {ah:478232}
+- 1 el chipotle peper {ah:414999}
+- 2,5 el tacokruiden {ah:140615}
+- scheutje olie
+- snuf zwarte peper en zout
+
+#### Wraps
+
+- 8 medium wraps {ah:401080}
+- 100 g geraspte Tex Mex kaas (zelfde zak als hierboven)
+- 10 g koriander, grof gehakt {ah:230802}
+- snufje chilivlokken
+
+### Bereiding
+
+1. Verwarm de oven voor op 200 °C hetelucht (220 °C boven-/onderwarmte) en bekleed een bakplaat of lage ovenschaal met bakpapier.
+2. Fruit de ui kort in wat olie en bak het gehakt erbij goudbruin.
+3. Bak knoflook, tomatenpuree en chipotle ongeveer 30 seconden mee.
+4. Voeg bonen, mais, paprika en tacokruiden toe en bak 2–3 minuten.
+5. Roer de zuivelspread en 50 g kaas erdoor en breng op smaak met peper en zout. Laat de vulling iets afkoelen.
+6. Verdeel de vulling over de wraps, rol ze op en leg ze naast elkaar op de bakplaat.
+7. Bestrooi met de rest van de kaas en bak ongeveer 10 minuten tot de kaas goudbruin is.
+8. Laat kort afkoelen en bestrooi met koriander en chilivlokken.
+
+### Tips
+
+- Lekker met guacamole, een dipsaus van crème fraîche en tortillachips.
+- De vulling kan een dag van tevoren; vul de wraps pas vlak voor het bakken.
+- Laat bonen en mais goed uitlekken, dan wordt de vulling niet te nat.
+- Minder pittig: minder of geen chipotle. Vegetarisch: vervang het gehakt door vegetarisch gehakt.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
