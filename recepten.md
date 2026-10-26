@@ -279,3 +279,75 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Aubergine-rolletjes in tomatensaus met ricotta
+
+![Aubergine-rolletjes in tomatensaus](https://fodk.s3.eu-central-1.amazonaws.com/wp-content/uploads/2026/07/05200652/aubergine-rolletjes-in-tomatensaus-met-ricotta-vulling.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 55 min | Italiaans | hoofdgerecht · vegetarisch · ovenschotel |
+
+Geroosterde aubergineplakken, opgerold met een romige ricottavulling en gegratineerd in een saus van verse tomaten.
+
+Bron: [familieoverdekook.nl](https://familieoverdekook.nl/aubergine-rolletjes-in-tomatensaus/)
+
+### Ingrediënten
+
+#### Aubergine
+
+- 2 aubergines {ah:239244@1st}
+- olijfolie om te bestrijken
+
+#### Ricottavulling
+
+- 250 g ricotta {ah:400469@250g}
+- 100 g Parmezaanse kaas, geraspt {ah:238913@145g}
+- 50 g geraspte mozzarella {ah:232017@150g}
+- 1 teen knoflook, geraspt {ah:185774@20st}
+- 10 g verse basilicum, fijngehakt {ah:197309}
+- ½ citroen, alleen de rasp {ah:577892@3st}
+- ½ tl chilivlokken (naar keuze)
+- snuf zwarte peper en zout
+
+#### Tomatensaus
+
+- 500 g trostomaten {ah:389076@500g}
+- 2 rode uien, gesnipperd {ah:525845@4st}
+- 3 tenen knoflook, geraspt {ah:185774@20st}
+- 70 g tomatenpuree {ah:556739@140g}
+- 2 tl gedroogde oregano
+- ⅓ tl chilivlokken
+- ½ tl suiker
+- 100 ml water
+- 10 g verse basilicum, grof gehakt {ah:197309}
+- scheutje olijfolie
+- snuf zwarte peper en zout
+
+#### Topping
+
+- 75 g geraspte mozzarella {ah:232017@150g}
+- 50 g Parmezaanse kaas, geraspt {ah:238913@145g}
+
+### Bereiding
+
+1. Verwarm de oven voor op 200 °C (boven-/onderwarmte) en bekleed twee bakplaten met bakpapier.
+2. Snijd {2} aubergines in de lengte in plakken van een halve centimeter, leg ze op de bakplaten en bestrijk ze dun met olijfolie. Rooster ze ongeveer 15 minuten tot ze zacht en soepel zijn. Laat de oven aan.
+3. Meng {250 g} ricotta, {100 g} Parmezaanse kaas, {50 g} mozzarella, {1} teen knoflook, {10 g} basilicum, de rasp van {½} citroen, chilivlokken, peper en zout.
+4. Rasp {500 g} trostomaten op een grove rasp boven een kom; gooi de velletjes weg.
+5. Fruit {2} rode uien 3–4 minuten in een scheutje olijfolie. Bak {3} tenen knoflook en {70 g} tomatenpuree 30 seconden mee.
+6. Voeg de geraspte tomaat, {2 tl} oregano, chilivlokken, {½ tl} suiker, peper, zout en {100 ml} water toe. Laat ongeveer 15 minuten zacht pruttelen tot de saus iets indikt en roer er {10 g} basilicum door.
+7. Verdeel de saus over de bodem van een ingevette ovenschaal.
+8. Leg op het brede uiteinde van elke aubergineplak een eetlepel vulling, rol op en leg de rolletjes met de naad naar beneden in de saus.
+9. Bestrooi met {75 g} mozzarella en {50 g} Parmezaanse kaas en bak 25–30 minuten tot de kaas goudbruin is. Laat 5 minuten rusten.
+
+### Tips
+
+- Buigen de aubergineplakken nog niet makkelijk dubbel, rooster ze dan 2–3 minuten langer.
+- Minder rijpe tomaten: een extra snufje suiker. Ook kan 1,5 pak tomatenblokjes in plaats van verse tomaten.
+- De schaal kan een dag van tevoren klaargemaakt worden; afgedekt in de koelkast en vlak voor het eten bakken.
+- Lekker met geroosterde ciabatta of een salade.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
