@@ -80,7 +80,12 @@ const html = `<!doctype html>
             text-decoration: none; }
   .ah-btn svg { flex: none; }
   .ah-btn.off { opacity: .4; pointer-events: none; }
-  .sec-ingredienten li.no-ah span { font-style: italic; }
+  .sec-ingredienten li.no-ah { padding-left: 23px; color: var(--muted); }
+  .persons { display: inline-flex; align-items: center; gap: 6px; }
+  .persons button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line);
+                    background: var(--card); color: var(--ink); font: 600 1rem/1 Inter, system-ui, sans-serif;
+                    cursor: pointer; padding: 0; }
+  .persons b { min-width: 1.2em; text-align: center; }
   .ah-hint { font-size: .8rem; color: var(--muted); text-align: center; margin: 6px 0 0; }
 
   .sec-bereiding ol { counter-reset: step; }
@@ -130,6 +135,24 @@ const CART = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke
   '<circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/></svg>';
 const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
+// Hoeveelheden: herkennen, schalen naar aantal personen en netjes tonen
+const FRAC = { "½": .5, "¼": .25, "¾": .75 };
+const UNITS = { g: ["g", 1], gram: ["g", 1], kg: ["g", 1000], ml: ["ml", 1], l: ["ml", 1000], el: ["el", 1], tl: ["tl", 1] };
+const num = s => FRAC[s] ?? parseFloat(s.replace(",", "."));
+function fmtQty(x, unit) {
+  if (unit === "g" || unit === "ml") return String(x >= 20 ? Math.round(x / 5) * 5 : Math.max(1, Math.round(x)));
+  if (x < .375) return "¼";
+  const h = Math.round(x * 2) / 2, whole = Math.floor(h);
+  return (whole ? String(whole) : "") + (h > whole ? "½" : "");
+}
+// v in g of ml -> "300 g", "1,2 kg", "750 ml", "1,5 l"
+function fmtMetric(v, unit) {
+  if (v >= 1000) return String(Math.round(v / 100) / 10).replace(".", ",") + (unit === "g" ? " kg" : " l");
+  return fmtQty(v, unit) + " " + unit;
+}
+// Ruimte voor een iets kleinere verpakking dan nodig (bijv. 360 g blik bij 380 g in het recept)
+const PACK_SLACK = 1.15;
+
 const src = el("div");
 src.innerHTML = marked.parse(MD);
 
@@ -154,7 +177,7 @@ for (const [h2, ...rest] of groups) {
   body.append(h2);
   const intro = el("div", "intro");
   const sections = [];
-  let img = null;
+  let img = null, basePersons = 0, persons = null;
 
   for (const node of rest) {
     if (node.tagName === "H3") {
@@ -176,6 +199,13 @@ for (const [h2, ...rest] of groups) {
             const s = el("span", "tag"); s.textContent = t; tags.append(s); allTags.add(t);
             art.dataset.tags += "|" + t;
           });
+        } else if (k.toLowerCase() === "personen" && /^\\d+$/.test(vals[i])) {
+          basePersons = +vals[i];
+          persons = el("span", "persons");
+          persons.innerHTML = 'Personen: <button type="button" aria-label="Minder personen">−</button>' +
+            '<b></b><button type="button" aria-label="Meer personen">+</button>';
+          persons.querySelector("b").textContent = vals[i];
+          meta.append(persons);
         } else {
           const m = el("span"); m.innerHTML = k + ": <b></b>"; m.querySelector("b").textContent = vals[i];
           meta.append(m);
@@ -200,37 +230,78 @@ for (const [h2, ...rest] of groups) {
   art.append(body);
   main.append(art);
 
+  const ingr = cols.querySelector(".sec-ingredienten");
   cols.querySelectorAll(".sec-ingredienten li").forEach(li => {
-    // {ah:productnummer} of {ah:productnummer:aantal} -> data-ah, niet tonen
+    // {ah:nr}, {ah:nr:aantal} of {ah:nr@verpakking} (bijv. @330g, @400ml, @6st) -> data-*, niet tonen
     const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
     for (let n; (n = walker.nextNode());)
-      n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?\\}/, (_, id, qty) => {
-        li.dataset.ah = id + ":" + (qty || 1); return "";
-      });
+      n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?(?:@(\\d+(?:[.,]\\d+)?)(g|ml|st))?\\}/,
+        (_, id, fixed, pack, packUnit) => {
+          Object.assign(li.dataset, { ah: id, fixed: fixed || "", pack: pack ? num(pack) : "", packUnit: packUnit || "" });
+          return "";
+        });
+    // Hoeveelheid vooraan ("300 g", "½", "2,5 el") in een span zetten zodat die kan meeschalen
+    const first = li.firstChild;
+    const m = first && first.nodeType === 3 &&
+      first.nodeValue.match(/^(\\d+(?:[.,]\\d+)?|[½¼¾])(?![\\d.,]*\\s*[–-]\\s*\\d)(\\s*)([^\\s,]*)/);
+    if (m) {
+      const [unit, mult] = UNITS[m[3].toLowerCase()] || ["st", 1];
+      // Bij gewicht/volume hoort de eenheid bij de hoeveelheid (zodat 1200 g als 1,2 kg kan worden getoond)
+      const metric = unit === "g" || unit === "ml";
+      const text = metric ? m[0] : m[1];
+      const qty = el("span", "qty"); qty.textContent = text;
+      Object.assign(qty.dataset, { base: num(m[1]), unit, mult, metric: metric ? "1" : "",
+        shown: m[3].toLowerCase() in UNITS ? m[3].toLowerCase() : "st" });
+      first.nodeValue = first.nodeValue.slice(text.length);
+      li.insertBefore(qty, first);
+    }
+    if (!li.dataset.ah) { li.classList.add("no-ah"); return; } // gaat niet mee: gewoon tekst
     // Standaard aangevinkt (= nodig); uitvinken = al in huis, doorgestreept
     const label = el("label"); const cb = el("input"); cb.type = "checkbox"; cb.checked = true;
     const span = el("span"); span.append(...li.childNodes); label.append(cb, span); li.append(label);
   });
 
-  // Knop: aangevinkte ingrediënten met AH-product op het AH-lijstje zetten
-  const ingr = cols.querySelector(".sec-ingredienten");
+  let factor = 1;
+  const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
+  // Knop: aangevinkte ingrediënten op het AH-lijstje, met aantal verpakkingen per product
+  const update = () => {
+    if (!ingr) return;
+    const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => li.querySelector("input").checked);
+    const per = new Map(); // productnummer -> { sum (in verpakkingseenheid), min (vast aantal) }
+    for (const li of items) {
+      const d = li.dataset, q = li.querySelector(".qty"), e = per.get(d.ah) || { sum: 0, min: 0, pack: +d.pack };
+      if (d.pack && q && q.dataset.unit === d.packUnit) e.sum += q.dataset.base * q.dataset.mult * factor;
+      else e.min = Math.max(e.min, +d.fixed || 1);
+      per.set(d.ah, e);
+    }
+    const parts = [...per].map(([id, e]) =>
+      "p=" + id + ":" + Math.max(1, e.min, e.sum ? Math.ceil(e.sum / (e.pack * PACK_SLACK)) : 0));
+    btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + parts.join("&");
+    btn.innerHTML = CART + "<span>Op mijn AH-lijstje (" + items.length + ")</span>";
+    btn.classList.toggle("off", !items.length);
+  };
   if (ingr && ingr.querySelector("li[data-ah]")) {
-    const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
-    const hint = el("p", "ah-hint");
-    // Ingrediënten zonder AH-product (olie, zout, ...) gaan niet mee; markeren en noemen
-    ingr.querySelectorAll("li:not([data-ah])").forEach(li => li.classList.add("no-ah"));
-    const update = () => {
-      const checked = [...ingr.querySelectorAll("li")].filter(li => li.querySelector("input").checked);
-      const items = checked.filter(li => li.dataset.ah);
-      const skipped = checked.filter(li => !li.dataset.ah).map(li => li.textContent.trim());
-      btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + items.map(li => "p=" + li.dataset.ah).join("&");
-      btn.innerHTML = CART + "<span>Op mijn AH-lijstje (" + items.length + ")</span>";
-      btn.classList.toggle("off", !items.length);
-      hint.textContent = "Vink eerst uit wat je al in huis hebt." +
-        (skipped.length ? " Zonder AH-product, gaat niet mee: " + skipped.join(" · ") : "");
-    };
+    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst uit wat je al in huis hebt.";
     ingr.addEventListener("change", update); update();
     ingr.append(btn, hint);
+  }
+
+  // Aantal personen: hoeveelheden en aantallen voor het AH-lijstje meeschalen
+  if (persons && basePersons) {
+    let n = basePersons;
+    const [minus, plus] = persons.querySelectorAll("button");
+    const set = v => {
+      n = Math.min(20, Math.max(1, v)); factor = n / basePersons;
+      persons.querySelector("b").textContent = n;
+      art.querySelectorAll(".qty").forEach(q => {
+        q.textContent = factor === 1 ? q.dataset.orig : q.dataset.metric
+          ? fmtMetric(q.dataset.base * q.dataset.mult * factor, q.dataset.unit)
+          : fmtQty(q.dataset.base * factor, q.dataset.shown);
+      });
+      update();
+    };
+    art.querySelectorAll(".qty").forEach(q => { q.dataset.orig = q.textContent; });
+    minus.onclick = () => set(n - 1); plus.onclick = () => set(n + 1);
   }
   cols.querySelectorAll(".sec-bereiding li").forEach(li =>
     li.addEventListener("click", () => li.classList.toggle("done")));

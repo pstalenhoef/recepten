@@ -13,9 +13,13 @@ Format per recept (de webpagina leest deze structuur uit):
 
 Bron: [site](url)
 
-### Ingrediënten      (lijst met - ; optioneel {ah:productnummer} of {ah:productnummer:aantal}
-                     voor de AH-knop; het nummer staat in de AH-productlink na "wi";
+### Ingrediënten      (lijst met - , hoeveelheid vooraan zodat die meeschaalt met het aantal personen;
                      bij meerdere onderdelen een #### kopje per onderdeel)
+                     AH-knop: {ah:productnummer@verpakking}, bijv. {ah:168813@330g}, {ah:449714@400ml},
+                     {ah:127231@6st} (st = stuks; bij knoflook tenen). Het nummer staat in de AH-productlink
+                     na "wi". Het aantal verpakkingen volgt uit hoeveelheid en verpakking; zonder @ of bij
+                     een andere eenheid (el, handje) gaat er 1 mee, of het vaste aantal van {ah:nr:aantal}.
+                     Ingrediënten zonder {ah:...} gaan niet mee en zijn niet aan te vinken.
 ### Bereiding         (genummerde lijst)
 ### Tips              (optioneel)
 ### Mijn notities     (optioneel: eigen aanpassingen)
@@ -35,14 +39,14 @@ Bron: [leukerecepten.nl](https://www.leukerecepten.nl/recepten/kikkererwten-curr
 
 ### Ingrediënten
 
-- 300 g kikkererwten (pot of blik, uitgelekt) {ah:168813}
-- 70 g boemboe rode curry (kruidenpasta) {ah:199252}
-- 400 ml kokosmelk {ah:449714}
-- 400 g zoete aardappel (geschild) {ah:582492}
+- 300 g kikkererwten (pot of blik, uitgelekt) {ah:168813@330g}
+- 70 g boemboe rode curry (kruidenpasta) {ah:199252@70g}
+- 400 ml kokosmelk {ah:449714@400ml}
+- 400 g zoete aardappel (geschild) {ah:582492@450g}
 - 1 handje cashewnoten {ah:547010}
-- 1 ui {ah:525848}
-- 2 tenen knoflook {ah:185774}
-- 200 g spinazie {ah:235203}
+- 1 ui {ah:525848@4st}
+- 2 tenen knoflook {ah:185774@20st}
+- 200 g spinazie {ah:235203@200g}
 - 4 el (plantaardige) yoghurt {ah:378706}
 - olie om in te bakken
 
@@ -80,15 +84,15 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 
 ### Ingrediënten
 
-- 4 eieren {ah:127231}
-- 600 g aardappelen {ah:127726}
-- 1 ui {ah:525848}
-- 15 g gember {ah:104818}
-- 1 rode peper {ah:387770}
-- 400 g sperziebonen {ah:409995}
+- 4 eieren {ah:127231@6st}
+- 600 g aardappelen {ah:127726@1000g}
+- 1 ui {ah:525848@4st}
+- 15 g gember {ah:104818@150g}
+- 1 rode peper {ah:387770@3st}
+- 400 g sperziebonen {ah:409995@450g}
 - 1 el olie
 - 1 el kerriepoeder {ah:197972}
-- ½ (groente)bouillontablet met minder zout {ah:215244}
+- ½ (groente)bouillontablet met minder zout {ah:215244@8st}
 - 100 ml water
 - 2 el kokosmelk light {ah:592089}
 
@@ -125,14 +129,14 @@ Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/taglia
 
 ### Ingrediënten
 
-- 300 g verse volkoren tagliatelle {ah:525268}
-- 2 rode uien {ah:525845}
-- 2 tenen knoflook {ah:185774}
-- 1 courgette {ah:185202}
-- 250 g cherrytomaten {ah:67739}
-- 125 g mozzarella {ah:238911}
-- 85 g groene pesto {ah:199921}
-- 60 g rucola {ah:476742:2}
+- 300 g verse volkoren tagliatelle {ah:525268@250g}
+- 2 rode uien {ah:525845@4st}
+- 2 tenen knoflook {ah:185774@20st}
+- 1 courgette {ah:185202@1st}
+- 250 g cherrytomaten {ah:67739@250g}
+- 125 g mozzarella {ah:238911@125g}
+- 85 g groene pesto {ah:199921@135g}
+- 60 g rucola {ah:476742@40g}
 - 2 el milde olijfolie
 
 ### Bereiding
@@ -167,16 +171,16 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 
 #### Traybake
 
-- 1 kg aardappelen {ah:127726}
-- 2 paprika's, in brede repen {ah:415248}
-- 1 courgette, in halve plakjes van 0,5–1 cm {ah:185202}
-- 2 uien, in brede halve ringen {ah:525848}
+- 1 kg aardappelen {ah:127726@1000g}
+- 2 paprika's, in brede repen {ah:415248@2st}
+- 1 courgette, in halve plakjes van 0,5–1 cm {ah:185202@1st}
+- 2 uien, in brede halve ringen {ah:525848@4st}
 
 #### Kruidenolie
 
 - 6 el olijfolie
 - 2 takjes rozemarijn, blaadjes fijngehakt {ah:238972}
-- 3 tenen knoflook, geraspt {ah:185774}
+- 3 tenen knoflook, geraspt {ah:185774@20st}
 - 1 tl paprikapoeder
 - 1 tl kerriepoeder
 - ½ tl kaneel
@@ -185,15 +189,15 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 #### Knoflookmayonaise
 
 - 5 el mayonaise {ah:199231}
-- 1 teen knoflook, geraspt
+- 1 teen knoflook, geraspt {ah:185774@20st}
 - 1 el citroensap {ah:577892}
 - 1 tl gedroogde peterselie
 - flinke snuf zwarte peper en een snufje zout
 
 #### Afmaken
 
-- 100 g feta, verkruimeld {ah:497552}
-- handje rucola {ah:476742}
+- 100 g feta, verkruimeld {ah:497552@150g}
+- handje rucola {ah:476742@40g}
 - snuf zeezout
 - snuf pul biber of chilivlokken
 
@@ -231,16 +235,16 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 
 #### Vulling
 
-- 500 g rundergehakt {ah:436753}
-- 380 g kidneybonen, uitgelekt {ah:168814}
-- 380 g zwarte bonen, uitgelekt {ah:585661}
-- 150 g mais, uitgelekt {ah:583799}
-- 1 paprika, in blokjes {ah:128874}
-- 1 ui, gesnipperd {ah:525848}
-- 3 tenen knoflook, geraspt {ah:185774}
-- 70 g tomatenpuree {ah:556739}
-- 75 g zuivelspread {ah:506228}
-- 50 g geraspte Tex Mex kaas {ah:478232}
+- 500 g rundergehakt {ah:436753@500g}
+- 380 g kidneybonen, uitgelekt {ah:168814@360g}
+- 380 g zwarte bonen, uitgelekt {ah:585661@360g}
+- 150 g mais, uitgelekt {ah:583799@150g}
+- 1 paprika, in blokjes {ah:128874@1st}
+- 1 ui, gesnipperd {ah:525848@4st}
+- 3 tenen knoflook, geraspt {ah:185774@20st}
+- 70 g tomatenpuree {ah:556739@140g}
+- 75 g zuivelspread {ah:506228@200g}
+- 50 g geraspte Tex Mex kaas {ah:478232@150g}
 - 1 el chipotle peper {ah:414999}
 - 2,5 el tacokruiden {ah:140615}
 - scheutje olie
@@ -248,9 +252,9 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 
 #### Wraps
 
-- 8 medium wraps {ah:401080}
-- 100 g geraspte Tex Mex kaas (zelfde zak als hierboven)
-- 10 g koriander, grof gehakt {ah:230802}
+- 8 medium wraps {ah:401080@8st}
+- 100 g geraspte Tex Mex kaas {ah:478232@150g}
+- 10 g koriander, grof gehakt {ah:230802@9g}
 - snufje chilivlokken
 
 ### Bereiding
