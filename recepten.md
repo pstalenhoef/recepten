@@ -108,3 +108,41 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Tagliatelle met pesto, courgette en rucola
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 15 min | Italiaans | hoofdgerecht · vegetarisch · pasta · snel |
+
+Volkoren pasta pesto met veel groente, mozzarella en rucola; in een kwartier klaar.
+
+Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/tagliatelle-met-pesto-courgette-en-rucola)
+
+### Ingrediënten
+
+- 300 g verse volkoren tagliatelle
+- 2 rode uien
+- 2 tenen knoflook
+- 1 courgette
+- 250 g cherrytomaten
+- 125 g mozzarella
+- 85 g groene pesto
+- 60 g rucola
+- 2 el milde olijfolie
+
+### Bereiding
+
+1. Kook de tagliatelle volgens de verpakking. Snijd intussen de ui in ringen, de knoflook fijn en de courgette in blokjes van 1 cm.
+2. Bak ui en knoflook 3 minuten in de olie op middelhoog vuur. Voeg de courgette toe en bak 5 minuten tot goudbruin.
+3. Halveer de tomaatjes, roer ze door de groente en breng op smaak met peper (en zout). Haal van het vuur en snijd de mozzarella in blokjes.
+4. Giet de pasta af en bewaar wat kookvocht. Meng pesto, rucola en 2 el kookvocht door de pasta.
+5. Schep de pasta in diepe borden en verdeel de groente en mozzarella erover.
+
+### Tips
+
+- Lekker met Parmezaanse kaas.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
