@@ -111,6 +111,8 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 
 ## Tagliatelle met pesto, courgette en rucola
 
+![Tagliatelle met pesto](https://static.ah.nl/static/recepten/img_RAM_PRD184620_1224x900_JPG.jpg)
+
 | Personen | Tijd | Keuken | Labels |
 |---|---|---|---|
 | 4 | 15 min | Italiaans | hoofdgerecht · vegetarisch · pasta · snel |
