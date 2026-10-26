@@ -1,6 +1,7 @@
 # Mijn recepten
 
-Recepten die ik vaak maak, met een link naar de bron.
+Recepten van andere koks en sites die ik vaak maak. Ze zijn niet van mij: bij elk recept staat van wie het is,
+met een link naar het origineel.
 
 <!--
 Format per recept (de webpagina leest deze structuur uit):
@@ -11,7 +12,7 @@ Format per recept (de webpagina leest deze structuur uit):
 |---|---|---|---|
 | 4 | 30 min | ... | label1 · label2 |
 
-Bron: [site](url)
+Bron: [site](url)    (wordt getoond als "Recept van …", op de foto en onderaan; zonder Bron: "Eigen recept")
 
 ### Ingrediënten      (lijst met - , hoeveelheid vooraan zodat die meeschaalt met het aantal personen;
                      bij meerdere onderdelen een #### kopje per onderdeel)

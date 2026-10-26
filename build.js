@@ -60,6 +60,17 @@ const html = `<!doctype html>
   .meta { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--muted); font-size: .95rem; margin: 0 0 10px; }
   .meta b { color: var(--ink); font-weight: 600; }
   .intro p { margin: 6px 0; }
+  .src-badge { margin: -2px 0 10px; font-size: .95rem; color: var(--muted); }
+  .src-badge a { font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--accent-soft); }
+  .src-badge.own { color: var(--accent); font-weight: 600; }
+  .hero-wrap { position: relative; margin: 0; }
+  .hero-wrap figcaption { position: absolute; right: 10px; bottom: 10px; padding: 3px 10px; border-radius: 999px;
+                          background: rgba(0,0,0,.55); color: #fff; font-size: .75rem; }
+  .credit { margin-top: 20px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; font-size: .9rem; }
+  .credit p { margin: 0 0 8px; color: var(--muted); }
+  .credit b { color: var(--ink); }
+  .credit a { font-weight: 600; }
+  .toc small { display: block; padding: 0 12px 8px; margin-top: -4px; color: var(--muted); font-size: .8rem; }
   .source { font-size: .9rem; color: var(--muted); }
 
   .cols { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 32px; margin-top: 20px; }
@@ -187,7 +198,7 @@ for (const [h2, ...rest] of groups) {
   body.append(h2);
   const intro = el("div", "intro");
   const sections = [];
-  let img = null, basePersons = 0, persons = null;
+  let img = null, basePersons = 0, persons = null, srcLink = null;
 
   for (const node of rest) {
     if (node.tagName === "H3") {
@@ -223,7 +234,8 @@ for (const [h2, ...rest] of groups) {
       });
       body.append(meta, tags); continue;
     }
-    if (/^bron:/i.test(node.textContent.trim())) node.className = "source";
+    // "Bron: [site](url)" wordt los en duidelijk getoond (onder de titel, op de foto en onderaan)
+    if (/^bron:/i.test(node.textContent.trim()) && node.querySelector("a")) { srcLink = node.querySelector("a"); continue; }
     intro.append(node);
   }
   body.append(intro);
@@ -236,7 +248,30 @@ for (const [h2, ...rest] of groups) {
   }
   body.append(cols, extra);
 
-  if (img) { img.className = "hero"; img.loading = "lazy"; art.append(img); }
+  const srcName = srcLink && srcLink.textContent.trim();
+  const ext = (href, text) => {
+    const a = el("a"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.textContent = text; return a;
+  };
+  if (srcLink) {
+    const badge = el("p", "src-badge");
+    badge.append("Recept van ", ext(srcLink.href, srcName + " ↗"));
+    h2.after(badge);
+    const credit = el("div", "credit");
+    const p1 = el("p"); p1.append("Dit recept is niet van mij, maar van ", el("b"), ". Ik heb het samengevat en " +
+      "aangevuld met mijn eigen aantekeningen; het origineel, met de volledige uitleg, staat op hun site.");
+    p1.querySelector("b").textContent = srcName;
+    credit.append(p1, ext(srcLink.href, "Bekijk het originele recept op " + srcName + " ↗"));
+    body.append(credit);
+  } else {
+    const badge = el("p", "src-badge own"); badge.textContent = "Eigen recept"; h2.after(badge);
+  }
+
+  if (img) {
+    img.className = "hero"; img.loading = "lazy";
+    const fig = el("figure", "hero-wrap"); fig.append(img);
+    if (srcName) { const cap = el("figcaption"); cap.textContent = "Foto: " + srcName; fig.append(cap); }
+    art.append(fig);
+  }
   art.append(body);
   main.append(art);
 
@@ -331,6 +366,7 @@ for (const [h2, ...rest] of groups) {
   const a = el("a"); a.href = "#" + art.id;
   if (img) { const t = el("img"); t.src = img.src; t.alt = ""; t.loading = "lazy"; a.append(t); }
   const name = el("span"); name.textContent = h2.textContent; a.append(name);
+  const from = el("small"); from.textContent = srcName ? "van " + srcName : "eigen recept"; a.append(from);
   a.dataset.target = art.id; toc.append(a);
 }
 
