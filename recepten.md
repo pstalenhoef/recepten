@@ -14,7 +14,8 @@ Format per recept (de webpagina leest deze structuur uit):
 Bron: [site](url)
 
 ### Ingrediënten      (lijst met - ; optioneel {ah:productnummer} of {ah:productnummer:aantal}
-                     voor de AH-knop; het nummer staat in de AH-productlink na "wi")
+                     voor de AH-knop; het nummer staat in de AH-productlink na "wi";
+                     bij meerdere onderdelen een #### kopje per onderdeel)
 ### Bereiding         (genummerde lijst)
 ### Tips              (optioneel)
 ### Mijn notities     (optioneel: eigen aanpassingen)
@@ -145,6 +146,70 @@ Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/taglia
 ### Tips
 
 - Lekker met Parmezaanse kaas.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
+
+## Vegetarische traybake met aardappel en groenten
+
+![Vegetarische traybake](https://fodk.s3.eu-central-1.amazonaws.com/wp-content/uploads/2022/07/30180659/vegetarische-traybake.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 40 min | | hoofdgerecht · vegetarisch · ovenschotel |
+
+Aardappelpartjes en groenten van de bakplaat met een kruidige olie, feta, rucola en knoflookmayonaise.
+
+Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-met-aardappel-en-groenten/)
+
+### Ingrediënten
+
+#### Traybake
+
+- 1 kg aardappelen {ah:127726}
+- 2 paprika's, in brede repen {ah:415248}
+- 1 courgette, in halve plakjes van 0,5–1 cm {ah:185202}
+- 2 uien, in brede halve ringen {ah:525848}
+
+#### Kruidenolie
+
+- 6 el olijfolie
+- 2 takjes rozemarijn, blaadjes fijngehakt {ah:238972}
+- 3 tenen knoflook, geraspt {ah:185774}
+- 1 tl paprikapoeder
+- 1 tl kerriepoeder
+- ½ tl kaneel
+- snuf zwarte peper
+
+#### Knoflookmayonaise
+
+- 5 el mayonaise {ah:199231}
+- 1 teen knoflook, geraspt
+- 1 el citroensap {ah:577892}
+- 1 tl gedroogde peterselie
+- flinke snuf zwarte peper en een snufje zout
+
+#### Afmaken
+
+- 100 g feta, verkruimeld {ah:497552}
+- handje rucola {ah:476742}
+- snuf zeezout
+- snuf pul biber of chilivlokken
+
+### Bereiding
+
+1. Verwarm de oven voor op 200 °C. Schrob de aardappelen, snijd ze in partjes en kook ze 5–8 minuten beetgaar. Giet af.
+2. Meng de ingrediënten voor de kruidenolie, en apart die voor de knoflookmayonaise.
+3. Verdeel aardappel, paprika, courgette en ui over een grote bakplaat. Schenk de kruidenolie erover en bestrooi met zeezout en pul biber.
+4. Bak 20–25 minuten tot alles goudbruin en gaar is.
+5. Laat even afkoelen en verdeel de feta en rucola erover. Serveer met de knoflookmayonaise.
+
+### Tips
+
+- Gebruik een bakplaat of een ovenschaal met lage rand, zodat het vocht kan verdampen.
+- Andere groenten kunnen ook: champignons, aubergine, tomaat, of kort voorgekookte bloemkool of broccoli.
+- De kruidenolie is ook een lekkere marinade.
 
 ### Mijn notities
 

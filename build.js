@@ -67,6 +67,8 @@ const html = `<!doctype html>
   .recipe h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent);
                margin: 16px 0 8px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
   .recipe ul, .recipe ol { padding-left: 0; margin: 0; }
+  .recipe h4 { font-size: .95rem; margin: 14px 0 2px; }
+  .recipe h4:first-of-type { margin-top: 4px; }
 
   .sec-ingredienten li { list-style: none; padding: 5px 0; border-bottom: 1px dashed var(--line); }
   .sec-ingredienten label { display: flex; gap: 10px; align-items: baseline; cursor: pointer; }
