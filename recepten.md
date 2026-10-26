@@ -352,3 +352,48 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/aubergine-rolletjes-in
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Pasta met citroen-roomsaus en spinazie
+
+![Pasta met citroen-roomsaus en spinazie](https://www.mindyourfeed.nl/wp-content/uploads/2021/09/Pasta-met-citroen-roomsaus-1-3.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 30 min | Italiaans | hoofdgerecht · vegetarisch · pasta · snel |
+
+Frisse, romige pasta al limone met Parmezaanse kaas, doperwten en spinazie.
+
+Bron: [mindyourfeed.nl](https://www.mindyourfeed.nl/recepten/diner/pasta-met-citroen-roomsaus-en-spinazie/)
+
+### Ingrediënten
+
+- 300 g verse spaghetti {ah:168206@250g}
+- 1 ui {ah:525848@4st}
+- 2 tenen knoflook {ah:185774@20st}
+- 150 g doperwten (diepvries) {ah:66113@350g}
+- 250 g verse bladspinazie {ah:235203@200g}
+- 1 citroen {ah:577892@3st}
+- 150 ml kookroom {ah:509631@250ml}
+- 75 g Parmezaanse kaas, geraspt, plus extra om af te maken {ah:238913@145g}
+- 1 el bloem
+- klontje boter
+- snuf peper
+
+### Bereiding
+
+1. Snipper {1} ui, pel {2} tenen knoflook en pers het sap uit {1} citroen.
+2. Smelt een klontje boter in een hapjespan en fruit de ui glazig. Pers de knoflook erboven uit.
+3. Bak {1 el} bloem kort mee. Schenk {150 ml} kookroom erbij, voeg het citroensap en {75 g} Parmezaanse kaas toe en laat zacht pruttelen tot een romige saus.
+4. Kook intussen {300 g} spaghetti volgens de verpakking.
+5. Roer {150 g} doperwten en {250 g} spinazie door de saus en breng op smaak met peper.
+6. Meng de spaghetti met de saus en bestrooi met extra Parmezaanse kaas.
+
+### Tips
+
+- Champignons passen er goed bij: bak ze mee na de ui en knoflook.
+- Wil je vlees of vis: gegrilde kip, witte vis of zalm.
+- Lekker met geroosterde wortelen uit de oven.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
