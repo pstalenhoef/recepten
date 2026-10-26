@@ -20,7 +20,8 @@ Bron: [site](url)
                      na "wi". Het aantal verpakkingen volgt uit hoeveelheid en verpakking; zonder @ of bij
                      een andere eenheid (el, handje) gaat er 1 mee, of het vaste aantal van {ah:nr:aantal}.
                      Ingrediënten zonder {ah:...} gaan niet mee en zijn niet aan te vinken.
-### Bereiding         (genummerde lijst)
+### Bereiding         (genummerde lijst; hoeveelheden tussen {} schalen mee, bijv. {600 g}, {2 el}, {4};
+                     tijden en temperaturen zonder {})
 ### Tips              (optioneel)
 ### Mijn notities     (optioneel: eigen aanpassingen)
 -->
@@ -52,13 +53,13 @@ Bron: [leukerecepten.nl](https://www.leukerecepten.nl/recepten/kikkererwten-curr
 
 ### Bereiding
 
-1. Snijd de zoete aardappel in kleine blokjes en kook ze ca. 5 minuten. Giet af.
-2. Snipper de ui, hak de knoflook fijn en fruit beide in wat olie.
-3. Voeg de currypasta toe en roerbak een paar minuten mee.
-4. Schenk de kokosmelk erbij en roer door.
-5. Laat de spinazie erin slinken (diepvriesspinazie goed laten uitlekken).
-6. Voeg de zoete aardappel en daarna de kikkererwten toe, roer door en laat nog een paar minuten pruttelen.
-7. Serveer met een schep yoghurt en cashewnoten.
+1. Snijd {400 g} zoete aardappel in kleine blokjes en kook ze ca. 5 minuten. Giet af.
+2. Snipper {1} ui, hak {2} tenen knoflook fijn en fruit beide in wat olie.
+3. Voeg {70 g} currypasta toe en roerbak een paar minuten mee.
+4. Schenk {400 ml} kokosmelk erbij en roer door.
+5. Laat {200 g} spinazie erin slinken (diepvriesspinazie goed laten uitlekken).
+6. Voeg de zoete aardappel en daarna {300 g} kikkererwten toe, roer door en laat nog een paar minuten pruttelen.
+7. Serveer met {4 el} yoghurt en een handje cashewnoten.
 
 ### Tips
 
@@ -98,13 +99,13 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 
 ### Bereiding
 
-1. Kook de eieren in 8–10 minuten hard.
-2. Schil de aardappelen, snijd in blokjes en kook ze in weinig water 5 minuten.
-3. Snipper de ui, rasp de gember, snijd de peper in reepjes en maak de sperziebonen schoon.
-4. Fruit ui en gember met het kerriepoeder in de olie tot het geurt.
-5. Voeg aardappel, peper, het halve bouillontablet en het water toe. Breng aan de kook en laat 10 minuten zacht stoven.
+1. Kook {4} eieren in 8–10 minuten hard.
+2. Schil {600 g} aardappelen, snijd in blokjes en kook ze in weinig water 5 minuten.
+3. Snipper {1} ui, rasp {15 g} gember, snijd {1} rode peper in reepjes en maak {400 g} sperziebonen schoon.
+4. Fruit ui en gember met {1 el} kerriepoeder in {1 el} olie tot het geurt.
+5. Voeg aardappel, peper, {½} bouillontablet en {100 ml} water toe. Breng aan de kook en laat 10 minuten zacht stoven.
 6. Kook intussen de sperziebonen in weinig water in 8 minuten beetgaar.
-7. Pel de eieren, snijd ze in parten en roer ze met de kokosmelk door de curry. Even goed warm laten worden.
+7. Pel de eieren, snijd ze in parten en roer ze met {2 el} kokosmelk door de curry. Even goed warm laten worden.
 8. Serveer met de sperziebonen.
 
 ### Tips
@@ -141,10 +142,10 @@ Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/taglia
 
 ### Bereiding
 
-1. Kook de tagliatelle volgens de verpakking. Snijd intussen de ui in ringen, de knoflook fijn en de courgette in blokjes van 1 cm.
-2. Bak ui en knoflook 3 minuten in de olie op middelhoog vuur. Voeg de courgette toe en bak 5 minuten tot goudbruin.
-3. Halveer de tomaatjes, roer ze door de groente en breng op smaak met peper (en zout). Haal van het vuur en snijd de mozzarella in blokjes.
-4. Giet de pasta af en bewaar wat kookvocht. Meng pesto, rucola en 2 el kookvocht door de pasta.
+1. Kook {300 g} tagliatelle volgens de verpakking. Snijd intussen {2} rode uien in ringen, {2} tenen knoflook fijn en {1} courgette in blokjes van 1 cm.
+2. Bak ui en knoflook 3 minuten in {2 el} olie op middelhoog vuur. Voeg de courgette toe en bak 5 minuten tot goudbruin.
+3. Halveer {250 g} tomaatjes, roer ze door de groente en breng op smaak met peper (en zout). Haal van het vuur en snijd {125 g} mozzarella in blokjes.
+4. Giet de pasta af en bewaar wat kookvocht. Meng {85 g} pesto, {60 g} rucola en {2 el} kookvocht door de pasta.
 5. Schep de pasta in diepe borden en verdeel de groente en mozzarella erover.
 
 ### Tips
@@ -203,11 +204,11 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-traybake-
 
 ### Bereiding
 
-1. Verwarm de oven voor op 200 °C. Schrob de aardappelen, snijd ze in partjes en kook ze 5–8 minuten beetgaar. Giet af.
-2. Meng de ingrediënten voor de kruidenolie, en apart die voor de knoflookmayonaise.
-3. Verdeel aardappel, paprika, courgette en ui over een grote bakplaat. Schenk de kruidenolie erover en bestrooi met zeezout en pul biber.
+1. Verwarm de oven voor op 200 °C. Schrob {1 kg} aardappelen, snijd ze in partjes en kook ze 5–8 minuten beetgaar. Giet af.
+2. Meng voor de kruidenolie {6 el} olijfolie met de rozemarijn, {3} tenen knoflook, {1 tl} paprikapoeder, {1 tl} kerriepoeder, {½ tl} kaneel en peper. Meng apart {5 el} mayonaise met {1} teen knoflook, {1 el} citroensap, {1 tl} peterselie, peper en zout.
+3. Verdeel aardappel, {2} paprika's, {1} courgette en {2} uien over een grote bakplaat. Schenk de kruidenolie erover en bestrooi met zeezout en pul biber.
 4. Bak 20–25 minuten tot alles goudbruin en gaar is.
-5. Laat even afkoelen en verdeel de feta en rucola erover. Serveer met de knoflookmayonaise.
+5. Laat even afkoelen en verdeel {100 g} feta en een handje rucola erover. Serveer met de knoflookmayonaise.
 
 ### Tips
 
@@ -260,13 +261,13 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/mexicaanse-wraps-uit-d
 ### Bereiding
 
 1. Verwarm de oven voor op 200 °C hetelucht (220 °C boven-/onderwarmte) en bekleed een bakplaat of lage ovenschaal met bakpapier.
-2. Fruit de ui kort in wat olie en bak het gehakt erbij goudbruin.
-3. Bak knoflook, tomatenpuree en chipotle ongeveer 30 seconden mee.
-4. Voeg bonen, mais, paprika en tacokruiden toe en bak 2–3 minuten.
-5. Roer de zuivelspread en 50 g kaas erdoor en breng op smaak met peper en zout. Laat de vulling iets afkoelen.
-6. Verdeel de vulling over de wraps, rol ze op en leg ze naast elkaar op de bakplaat.
-7. Bestrooi met de rest van de kaas en bak ongeveer 10 minuten tot de kaas goudbruin is.
-8. Laat kort afkoelen en bestrooi met koriander en chilivlokken.
+2. Fruit {1} ui kort in wat olie en bak {500 g} gehakt erbij goudbruin.
+3. Bak {3} tenen knoflook, {70 g} tomatenpuree en {1 el} chipotle ongeveer 30 seconden mee.
+4. Voeg {380 g} kidneybonen, {380 g} zwarte bonen, {150 g} mais, {1} paprika en {2,5 el} tacokruiden toe en bak 2–3 minuten.
+5. Roer {75 g} zuivelspread en {50 g} kaas erdoor en breng op smaak met peper en zout. Laat de vulling iets afkoelen.
+6. Verdeel de vulling over {8} wraps, rol ze op en leg ze naast elkaar op de bakplaat.
+7. Bestrooi met {100 g} kaas en bak ongeveer 10 minuten tot de kaas goudbruin is.
+8. Laat kort afkoelen en bestrooi met {10 g} koriander en chilivlokken.
 
 ### Tips
 

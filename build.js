@@ -150,6 +150,16 @@ function fmtMetric(v, unit) {
   if (v >= 1000) return String(Math.round(v / 100) / 10).replace(".", ",") + (unit === "g" ? " kg" : " l");
   return fmtQty(v, unit) + " " + unit;
 }
+// Span voor een schaalbare hoeveelheid ("300 g", "½", "2,5 el")
+function makeQty(n, ws, word) {
+  const [unit, mult] = UNITS[word.toLowerCase()] || ["st", 1];
+  // Bij gewicht/volume hoort de eenheid bij de hoeveelheid (zodat 1200 g als 1,2 kg kan worden getoond)
+  const metric = unit === "g" || unit === "ml";
+  const qty = el("span", "qty"); qty.textContent = metric ? n + ws + word : n;
+  Object.assign(qty.dataset, { base: num(n), unit, mult, metric: metric ? "1" : "",
+    shown: word.toLowerCase() in UNITS ? word.toLowerCase() : "st" });
+  return qty;
+}
 // Ruimte voor een iets kleinere verpakking dan nodig (bijv. 360 g blik bij 380 g in het recept)
 const PACK_SLACK = 1.15;
 
@@ -245,14 +255,8 @@ for (const [h2, ...rest] of groups) {
     const m = first && first.nodeType === 3 &&
       first.nodeValue.match(/^(\\d+(?:[.,]\\d+)?|[½¼¾])(?![\\d.,]*\\s*[–-]\\s*\\d)(\\s*)([^\\s,]*)/);
     if (m) {
-      const [unit, mult] = UNITS[m[3].toLowerCase()] || ["st", 1];
-      // Bij gewicht/volume hoort de eenheid bij de hoeveelheid (zodat 1200 g als 1,2 kg kan worden getoond)
-      const metric = unit === "g" || unit === "ml";
-      const text = metric ? m[0] : m[1];
-      const qty = el("span", "qty"); qty.textContent = text;
-      Object.assign(qty.dataset, { base: num(m[1]), unit, mult, metric: metric ? "1" : "",
-        shown: m[3].toLowerCase() in UNITS ? m[3].toLowerCase() : "st" });
-      first.nodeValue = first.nodeValue.slice(text.length);
+      const qty = makeQty(m[1], m[2], m[3]);
+      first.nodeValue = first.nodeValue.slice(qty.textContent.length);
       li.insertBefore(qty, first);
     }
     if (!li.dataset.ah) { li.classList.add("no-ah"); return; } // gaat niet mee: gewoon tekst
@@ -294,15 +298,33 @@ for (const [h2, ...rest] of groups) {
       n = Math.min(20, Math.max(1, v)); factor = n / basePersons;
       persons.querySelector("b").textContent = n;
       art.querySelectorAll(".qty").forEach(q => {
+        if (!("orig" in q.dataset)) q.dataset.orig = q.textContent;
         q.textContent = factor === 1 ? q.dataset.orig : q.dataset.metric
           ? fmtMetric(q.dataset.base * q.dataset.mult * factor, q.dataset.unit)
           : fmtQty(q.dataset.base * factor, q.dataset.shown);
       });
       update();
     };
-    art.querySelectorAll(".qty").forEach(q => { q.dataset.orig = q.textContent; });
     minus.onclick = () => set(n - 1); plus.onclick = () => set(n + 1);
   }
+  // Hoeveelheden in de bereiding staan tussen {}: "{600 g}", "{2}" -> schaalbare span
+  cols.querySelectorAll(".sec-bereiding li").forEach(li => {
+    const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT), nodes = [];
+    for (let n; (n = walker.nextNode());) nodes.push(n);
+    for (const n of nodes) {
+      const parts = n.nodeValue.split(/\\{(\\d+(?:[.,]\\d+)?|[½¼¾])(\\s*)([^\\s}]*)\\}/);
+      if (parts.length === 1) continue;
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < parts.length; i += 4) {
+        frag.append(parts[i]);
+        if (i + 1 < parts.length) {
+          const qty = makeQty(parts[i + 1], parts[i + 2], parts[i + 3]);
+          frag.append(qty, qty.dataset.metric ? "" : parts[i + 2] + parts[i + 3]);
+        }
+      }
+      n.replaceWith(frag);
+    }
+  });
   cols.querySelectorAll(".sec-bereiding li").forEach(li =>
     li.addEventListener("click", () => li.classList.toggle("done")));
 
