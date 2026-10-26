@@ -71,10 +71,12 @@ const html = `<!doctype html>
   .sec-ingredienten li { list-style: none; padding: 5px 0; border-bottom: 1px dashed var(--line); }
   .sec-ingredienten label { display: flex; gap: 10px; align-items: baseline; cursor: pointer; }
   .sec-ingredienten input { accent-color: var(--accent); }
-  .sec-ingredienten input:checked + span { color: var(--done); text-decoration: line-through; }
+  .sec-ingredienten input:not(:checked) + span { color: var(--done); text-decoration: line-through; }
 
-  .ah-btn { display: block; text-align: center; margin-top: 14px; padding: 10px 14px; border-radius: 10px;
-            background: #00a0e2; color: #fff; font-weight: 600; text-decoration: none; }
+  .ah-btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px;
+            padding: 10px 14px; border-radius: 10px; background: #00a0e2; color: #fff; font-weight: 600;
+            text-decoration: none; }
+  .ah-btn svg { flex: none; }
   .ah-btn.off { opacity: .4; pointer-events: none; }
   .ah-hint { font-size: .8rem; color: var(--muted); text-align: center; margin: 6px 0 0; }
 
@@ -120,6 +122,9 @@ const html = `<!doctype html>
 const MD = ${embedded};
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "")
                    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const CART = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" ' +
+  'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.6"/>' +
+  '<circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.1h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/></svg>';
 const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
 
 const src = el("div");
@@ -199,19 +204,20 @@ for (const [h2, ...rest] of groups) {
       n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?\\}/, (_, id, qty) => {
         li.dataset.ah = id + ":" + (qty || 1); return "";
       });
-    const label = el("label"); const cb = el("input"); cb.type = "checkbox";
+    // Standaard aangevinkt (= nodig); uitvinken = al in huis, doorgestreept
+    const label = el("label"); const cb = el("input"); cb.type = "checkbox"; cb.checked = true;
     const span = el("span"); span.append(...li.childNodes); label.append(cb, span); li.append(label);
   });
 
-  // Knop: niet-afgevinkte ingrediënten met AH-product op het AH-lijstje zetten
+  // Knop: aangevinkte ingrediënten met AH-product op het AH-lijstje zetten
   const ingr = cols.querySelector(".sec-ingredienten");
   if (ingr && ingr.querySelector("li[data-ah]")) {
     const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
-    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst af wat je al in huis hebt.";
+    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst uit wat je al in huis hebt.";
     const update = () => {
-      const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => !li.querySelector("input").checked);
+      const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => li.querySelector("input").checked);
       btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + items.map(li => "p=" + li.dataset.ah).join("&");
-      btn.textContent = "🛒 Op mijn AH-lijstje (" + items.length + ")";
+      btn.innerHTML = CART + "<span>Op mijn AH-lijstje (" + items.length + ")</span>";
       btn.classList.toggle("off", !items.length);
     };
     ingr.addEventListener("change", update); update();
