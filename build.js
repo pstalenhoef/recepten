@@ -73,6 +73,11 @@ const html = `<!doctype html>
   .sec-ingredienten input { accent-color: var(--accent); }
   .sec-ingredienten input:checked + span { color: var(--done); text-decoration: line-through; }
 
+  .ah-btn { display: block; text-align: center; margin-top: 14px; padding: 10px 14px; border-radius: 10px;
+            background: #00a0e2; color: #fff; font-weight: 600; text-decoration: none; }
+  .ah-btn.off { opacity: .4; pointer-events: none; }
+  .ah-hint { font-size: .8rem; color: var(--muted); text-align: center; margin: 6px 0 0; }
+
   .sec-bereiding ol { counter-reset: step; }
   .sec-bereiding li { list-style: none; counter-increment: step; position: relative;
                       padding: 4px 0 12px 42px; cursor: pointer; }
@@ -188,9 +193,30 @@ for (const [h2, ...rest] of groups) {
   main.append(art);
 
   cols.querySelectorAll(".sec-ingredienten li").forEach(li => {
+    // {ah:productnummer} of {ah:productnummer:aantal} -> data-ah, niet tonen
+    const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
+    for (let n; (n = walker.nextNode());)
+      n.nodeValue = n.nodeValue.replace(/\\s*\\{ah:(\\d+)(?::(\\d+))?\\}/, (_, id, qty) => {
+        li.dataset.ah = id + ":" + (qty || 1); return "";
+      });
     const label = el("label"); const cb = el("input"); cb.type = "checkbox";
     const span = el("span"); span.append(...li.childNodes); label.append(cb, span); li.append(label);
   });
+
+  // Knop: niet-afgevinkte ingrediënten met AH-product op het AH-lijstje zetten
+  const ingr = cols.querySelector(".sec-ingredienten");
+  if (ingr && ingr.querySelector("li[data-ah]")) {
+    const btn = el("a", "ah-btn"); btn.target = "_blank"; btn.rel = "noopener";
+    const hint = el("p", "ah-hint"); hint.textContent = "Vink eerst af wat je al in huis hebt.";
+    const update = () => {
+      const items = [...ingr.querySelectorAll("li[data-ah]")].filter(li => !li.querySelector("input").checked);
+      btn.href = "https://www.ah.nl/mijnlijst/add-multiple?" + items.map(li => "p=" + li.dataset.ah).join("&");
+      btn.textContent = "🛒 Op mijn AH-lijstje (" + items.length + ")";
+      btn.classList.toggle("off", !items.length);
+    };
+    ingr.addEventListener("change", update); update();
+    ingr.append(btn, hint);
+  }
   cols.querySelectorAll(".sec-bereiding li").forEach(li =>
     li.addEventListener("click", () => li.classList.toggle("done")));
 

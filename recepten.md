@@ -13,7 +13,8 @@ Format per recept (de webpagina leest deze structuur uit):
 
 Bron: [site](url)
 
-### Ingrediënten      (lijst met - )
+### Ingrediënten      (lijst met - ; optioneel {ah:productnummer} of {ah:productnummer:aantal}
+                     voor de AH-knop; het nummer staat in de AH-productlink na "wi")
 ### Bereiding         (genummerde lijst)
 ### Tips              (optioneel)
 ### Mijn notities     (optioneel: eigen aanpassingen)
@@ -33,15 +34,15 @@ Bron: [leukerecepten.nl](https://www.leukerecepten.nl/recepten/kikkererwten-curr
 
 ### Ingrediënten
 
-- 300 g kikkererwten (pot of blik, uitgelekt)
-- 70 g boemboe rode curry (kruidenpasta)
-- 400 ml kokosmelk
-- 400 g zoete aardappel (geschild)
-- 1 handje cashewnoten
-- 1 ui
-- 2 tenen knoflook
-- 200 g spinazie
-- 4 el (plantaardige) yoghurt
+- 300 g kikkererwten (pot of blik, uitgelekt) {ah:168813}
+- 70 g boemboe rode curry (kruidenpasta) {ah:199252}
+- 400 ml kokosmelk {ah:449714}
+- 400 g zoete aardappel (geschild) {ah:582492}
+- 1 handje cashewnoten {ah:547010}
+- 1 ui {ah:525848}
+- 2 tenen knoflook {ah:185774}
+- 200 g spinazie {ah:235203}
+- 4 el (plantaardige) yoghurt {ah:378706}
 - olie om in te bakken
 
 ### Bereiding
@@ -78,17 +79,17 @@ Bron: [voedingscentrum.nl](https://www.voedingscentrum.nl/recepten/gezond-recept
 
 ### Ingrediënten
 
-- 4 eieren
-- 600 g aardappelen
-- 1 ui
-- 15 g gember
-- 1 rode peper
-- 400 g sperziebonen
+- 4 eieren {ah:127231}
+- 600 g aardappelen {ah:127726}
+- 1 ui {ah:525848}
+- 15 g gember {ah:104818}
+- 1 rode peper {ah:387770}
+- 400 g sperziebonen {ah:409995}
 - 1 el olie
-- 1 el kerriepoeder
-- ½ (groente)bouillontablet met minder zout
+- 1 el kerriepoeder {ah:197972}
+- ½ (groente)bouillontablet met minder zout {ah:215244}
 - 100 ml water
-- 2 el kokosmelk light
+- 2 el kokosmelk light {ah:592089}
 
 ### Bereiding
 
@@ -123,14 +124,14 @@ Bron: [ah.nl / Allerhande](https://www.ah.nl/allerhande/recept/R-R1199336/taglia
 
 ### Ingrediënten
 
-- 300 g verse volkoren tagliatelle
-- 2 rode uien
-- 2 tenen knoflook
-- 1 courgette
-- 250 g cherrytomaten
-- 125 g mozzarella
-- 85 g groene pesto
-- 60 g rucola
+- 300 g verse volkoren tagliatelle {ah:525268}
+- 2 rode uien {ah:525845}
+- 2 tenen knoflook {ah:185774}
+- 1 courgette {ah:185202}
+- 250 g cherrytomaten {ah:67739}
+- 125 g mozzarella {ah:238911}
+- 85 g groene pesto {ah:199921}
+- 60 g rucola {ah:476742:2}
 - 2 el milde olijfolie
 
 ### Bereiding
