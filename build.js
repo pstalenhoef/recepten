@@ -132,6 +132,14 @@ const html = `<!doctype html>
           border-radius: 999px; padding: 12px 18px; font: 600 .95rem Inter, system-ui, sans-serif;
           background: var(--card); color: var(--ink); box-shadow: var(--shadow); }
   .cook.on { background: var(--accent); color: #fff; }
+  .chef { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px;
+          background: rgba(20, 10, 5, .82); cursor: pointer; animation: chef-in .25s ease-out; }
+  .chef div { max-width: 520px; text-align: center; color: #fff; }
+  .chef .face { font-size: 5rem; display: inline-block; animation: shake .4s ease-in-out 3; }
+  .chef p { font: 700 1.6rem/1.3 Fraunces, Georgia, serif; margin: 12px 0 6px; }
+  .chef small { color: #d8c8b8; }
+  @keyframes chef-in { from { opacity: 0; transform: scale(1.1); } }
+  @keyframes shake { 25% { transform: rotate(-12deg); } 75% { transform: rotate(12deg); } }
   @media print {
     .toolbar, .toc, header.site p { display: none; }
     .recipe { box-shadow: none; break-inside: avoid; }
@@ -445,6 +453,49 @@ function filter() {
   document.getElementById("empty").style.display = shown ? "none" : "block";
 }
 q.addEventListener("input", filter);
+
+// Easter egg: boze tv-chef (parodie, zelfbedachte uitroepen, voorleesstem van de browser).
+// Toetsen: ↑ ↑ ↓ ↓ ← → ← → B A, of 5x snel op de titel tikken (telefoon).
+const CHEF_LINES = [
+  "This curry is so bland, it's applying for a job as wallpaper!",
+  "Where's the seasoning? Did it get lost on the way to the pan?",
+  "Look at this pasta! It's crying out for help, and so am I!",
+  "You call that a sauce? My shoelaces have more flavour!",
+  "Wake up! The onions are burning faster than my patience!",
+  "Stunning. Absolutely stunning. Now do it again, but faster!",
+];
+function chefRant() {
+  if (document.querySelector(".chef")) return;
+  const line = CHEF_LINES[Math.floor(Math.random() * CHEF_LINES.length)];
+  const box = el("div", "chef");
+  box.innerHTML = '<div><span class="face">👨‍🍳🔥</span><p></p><small>Parodie · tik om te sluiten</small></div>';
+  box.querySelector("p").textContent = "“" + line + "”";
+  box.onclick = () => { box.remove(); window.speechSynthesis?.cancel(); };
+  document.body.append(box);
+  if ("speechSynthesis" in window) {
+    const u = new SpeechSynthesisUtterance(line);
+    const v = speechSynthesis.getVoices().find(v => /en-GB/i.test(v.lang)) ||
+              speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    if (v) u.voice = v;
+    u.lang = v ? v.lang : "en-GB"; u.rate = 1.1; u.pitch = .8;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }
+  setTimeout(() => box.remove(), 6000);
+}
+const KONAMI = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let konamiPos = 0;
+document.addEventListener("keydown", e => {
+  if (e.target.matches && e.target.matches("input, textarea")) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  konamiPos = k === KONAMI[konamiPos] ? konamiPos + 1 : (k === KONAMI[0] ? 1 : 0);
+  if (konamiPos === KONAMI.length) { konamiPos = 0; chefRant(); }
+});
+let taps = [];
+document.getElementById("site").addEventListener("click", e => {
+  if (!e.target.closest("h1")) return;
+  const now = Date.now(); taps = taps.filter(t => now - t < 2000).concat(now);
+  if (taps.length >= 5) { taps = []; chefRant(); }
+});
 
 // Kookstand: scherm aan houden (Wake Lock API, werkt alleen via https)
 const cook = document.getElementById("cook");
