@@ -399,3 +399,53 @@ Bron: [mindyourfeed.nl](https://www.mindyourfeed.nl/recepten/diner/pasta-met-cit
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Vegetarische pasta in pikante tomatensaus
+
+![Vegetarische pasta in pikante tomatensaus](https://fodk.s3.eu-central-1.amazonaws.com/wp-content/uploads/2024/07/30181235/IMG_2513_jpg-scaled.jpeg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 30 min | Italiaans | hoofdgerecht · vegetarisch · pasta · snel |
+
+Pittige pasta met champignons, paprika en een saus van chili-tomato frito, in een half uur klaar.
+
+Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-pasta-in-pikante-tomatensaus/)
+
+### Ingrediënten
+
+- 300 g pasta {ah:543590@500g}
+- 250 g kastanjechampignons, in partjes {ah:101132@250g}
+- 1 rode ui, gesnipperd {ah:525845@4st}
+- 3 tenen knoflook, geraspt {ah:185774@20st}
+- 1 paprika, in blokjes {ah:128874@1st}
+- 1 pak tomato frito chili (350 g) {ah:577547@1st}
+- 4 el ketchup {ah:99132 voorraad}
+- 2 tl paprikapoeder {ah:197977 voorraad}
+- 1 el gedroogde oregano {ah:404122 voorraad}
+- 1 tl suiker {ah:101206 voorraad}
+- 1 groentebouillonblokje {ah:196664 voorraad}
+- 14 g basilicum, fijngehakt {ah:197309}
+- scheutje olijfolie {ah:60604 voorraad}
+- geraspte kaas naar wens {ah:238913 voorraad}
+- 50 ml water
+- snuf zwarte peper en zout
+
+### Bereiding
+
+1. Verhit een scheut olijfolie in een hapjespan en bak {1} rode ui, {250 g} champignons, {1} paprika en {3} tenen knoflook tot de champignons goudbruin zijn.
+2. Bak {2 tl} paprikapoeder, {1 el} oregano, peper en zout kort mee.
+3. Voeg {1} pak tomato frito, {4 el} ketchup, {1 tl} suiker en {50 ml} water toe en laat de saus 20 minuten pruttelen met de deksel op een kier.
+4. Kook intussen {300 g} pasta volgens de verpakking in water met {1} bouillonblokje. Giet af.
+5. Schep de pasta door de saus met twee derde van {14 g} basilicum.
+6. Verdeel over de borden en bestrooi met de rest van de basilicum en kaas naar wens.
+
+### Tips
+
+- Geen chili-tomato frito te vinden? Neem 350 g gewone tomato frito met een flinke theelepel sriracha.
+- Elke pastasoort werkt; volkoren pasta maakt het iets voedzamer.
+- Lekker met courgette uit de oven of een caprese salade. Wie wil, bakt er gehakt bij.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*

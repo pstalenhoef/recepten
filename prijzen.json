@@ -17,6 +17,14 @@
    "p": 3.05,
    "n": "AH Biologisch Cherrytomaten"
   },
+  "99132": {
+   "p": 1.79,
+   "n": "AH Biologisch Tomatenketchup"
+  },
+  "101132": {
+   "p": 1.97,
+   "n": "AH Biologisch Kastanjechampignons"
+  },
   "101206": {
    "p": 1.25,
    "n": "AH Biologisch Kristalsuiker"
@@ -64,6 +72,10 @@
   "185774": {
    "p": 1.34,
    "n": "AH Biologisch Knoflook"
+  },
+  "196664": {
+   "p": 1.25,
+   "n": "Zonnatura Groentebouillon tabletten"
   },
   "197309": {
    "p": 1.79,
@@ -209,6 +221,10 @@
    "p": 0.8,
    "n": "AH Biologisch Gele uien"
   },
+  "543590": {
+   "p": 0.71,
+   "n": "AH Biologisch Penne"
+  },
   "547010": {
    "p": 3.05,
    "n": "AH Biologisch Cashewnoten gezouten"
@@ -216,6 +232,10 @@
   "556739": {
    "p": 0.62,
    "n": "AH Biologisch Tomatenpuree"
+  },
+  "577547": {
+   "p": 1.69,
+   "n": "Heinz Tomato frito chili"
   },
   "577892": {
    "p": 1.43,
