@@ -457,16 +457,32 @@ q.addEventListener("input", filter);
 // Easter egg: boze tv-chef (parodie, zelfbedachte uitroepen, voorleesstem van de browser).
 // Toetsen: ↑ ↑ ↓ ↓ ← → ← → B A, of 5x snel op de titel tikken (telefoon).
 const CHEF_LINES = [
-  "This curry is so bland, it's applying for a job as wallpaper!",
-  "Where's the seasoning? Did it get lost on the way to the pan?",
-  "Look at this pasta! It's crying out for help, and so am I!",
-  "You call that a sauce? My shoelaces have more flavour!",
-  "Wake up! The onions are burning faster than my patience!",
-  "Stunning. Absolutely stunning. Now do it again, but faster!",
+  ["en", "This curry is so bland, it's applying for a job as wallpaper!"],
+  ["en", "Where's the seasoning? Did it get lost on the way to the pan?"],
+  ["en", "Look at this pasta! It's crying out for help, and so am I!"],
+  ["en", "You call that a sauce? My shoelaces have more flavour!"],
+  ["en", "Wake up! The onions are burning faster than my patience!"],
+  ["en", "Stunning. Absolutely stunning. Now do it again, but faster!"],
+  ["en", "This spinach has wilted more than my hopes for this kitchen!"],
+  ["en", "Taste it! Go on, taste it! Now tell me that's seasoned!"],
+  ["en", "The chickpeas are hiding from you. I don't blame them!"],
+  ["en", "Who cooked this? A toaster with ambition?"],
+  ["en", "Beautiful plating. Shame about the cold food underneath!"],
+  ["en", "More garlic! There is never enough garlic! Never!"],
+  ["nl", "Is dit een curry of een kom warm water met ambities?"],
+  ["nl", "Waar is het zout? Is het met vakantie of zo?"],
+  ["nl", "Die pasta is zo slap, die heeft zelf een recept nodig!"],
+  ["nl", "Proeven! Proeven! Wat proef je? Niks! Precies!"],
+  ["nl", "Mijn oma kookt beter, en die staat niet eens in de keuken!"],
+  ["nl", "Die uien zijn niet glazig, die zijn verbrand. Opnieuw!"],
+  ["nl", "Prachtig. Echt prachtig. Doe het nog een keer, maar dan sneller!"],
+  ["nl", "Wie heeft deze saus gemaakt? Een stofzuiger?"],
+  ["nl", "Meer knoflook! Er is nooit genoeg knoflook!"],
+  ["nl", "Dit is geen traybake, dit is een tray-ramp!"],
 ];
 function chefRant() {
   if (document.querySelector(".chef")) return;
-  const line = CHEF_LINES[Math.floor(Math.random() * CHEF_LINES.length)];
+  const [lang, line] = CHEF_LINES[Math.floor(Math.random() * CHEF_LINES.length)];
   const box = el("div", "chef");
   box.innerHTML = '<div><span class="face">👨‍🍳🔥</span><p></p><small>Parodie · tik om te sluiten</small></div>';
   box.querySelector("p").textContent = "“" + line + "”";
@@ -474,10 +490,12 @@ function chefRant() {
   document.body.append(box);
   if ("speechSynthesis" in window) {
     const u = new SpeechSynthesisUtterance(line);
-    const v = speechSynthesis.getVoices().find(v => /en-GB/i.test(v.lang)) ||
-              speechSynthesis.getVoices().find(v => /^en/i.test(v.lang));
+    const voices = speechSynthesis.getVoices();
+    const v = lang === "nl"
+      ? voices.find(v => /^nl/i.test(v.lang))
+      : voices.find(v => /en-GB/i.test(v.lang)) || voices.find(v => /^en/i.test(v.lang));
     if (v) u.voice = v;
-    u.lang = v ? v.lang : "en-GB"; u.rate = 1.1; u.pitch = .8;
+    u.lang = v ? v.lang : (lang === "nl" ? "nl-NL" : "en-GB"); u.rate = 1.1; u.pitch = .8;
     speechSynthesis.cancel(); speechSynthesis.speak(u);
   }
   setTimeout(() => box.remove(), 6000);
