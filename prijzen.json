@@ -25,6 +25,10 @@
    "p": 1.97,
    "n": "AH Biologisch Kastanjechampignons"
   },
+  "101165": {
+   "p": 0.8,
+   "n": "AH Biologisch Wortelen"
+  },
   "101206": {
    "p": 1.25,
    "n": "AH Biologisch Kristalsuiker"
@@ -52,6 +56,10 @@
   "140615": {
    "p": 0.75,
    "n": "AH Taco seasoning mix"
+  },
+  "164358": {
+   "p": 3.49,
+   "n": "AH Oranje zoete aardappel"
   },
   "168206": {
    "p": 2.49,
@@ -113,6 +121,14 @@
    "p": 2.49,
    "n": "Verstegen Peterselie"
   },
+  "216628": {
+   "p": 2.99,
+   "n": "Verstegen Italiaanse kruiden"
+  },
+  "223824": {
+   "p": 3.39,
+   "n": "Verstegen Maanzaad"
+  },
   "230802": {
    "p": 1.79,
    "n": "AH Biologisch Koriander pot"
@@ -157,6 +173,10 @@
    "p": 2.69,
    "n": "AH Biologisch Trostomaten"
   },
+  "396393": {
+   "p": 1.75,
+   "n": "AH Biologisch Volle kwark"
+  },
   "400469": {
    "p": 2.96,
    "n": "AH Biologisch Ricotta"
@@ -173,6 +193,10 @@
    "p": 1.21,
    "n": "AH Biologisch Sperziebonen"
   },
+  "410389": {
+   "p": 2.47,
+   "n": "AH Biologisch Bloemenhoning vloeibaar"
+  },
   "414999": {
    "p": 3.99,
    "n": "La Morena Diced chipotle pepper"
@@ -180,6 +204,14 @@
   "415248": {
    "p": 2.69,
    "n": "AH Biologisch Paprika duo"
+  },
+  "420734": {
+   "p": 3.69,
+   "n": "Molensteen Amandelmeel"
+  },
+  "426004": {
+   "p": 1.79,
+   "n": "AH Biologisch Flespompoen"
   },
   "436753": {
    "p": 8.09,
@@ -256,6 +288,18 @@
   "592089": {
    "p": 1.07,
    "n": "AH Biologisch Kokosmelk light 6% vet"
+  },
+  "595368": {
+   "p": 1.39,
+   "n": "AH Cottage cheese naturel"
+  },
+  "602498": {
+   "p": 2.24,
+   "n": "AH Biologisch Licht pittige mosterd"
+  },
+  "628069": {
+   "p": 3.19,
+   "n": "Let it Bio Gemalen boekweitmeel glutenvrij"
   }
  }
 }

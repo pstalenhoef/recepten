@@ -449,3 +449,63 @@ Bron: [familieoverdekook.nl](https://familieoverdekook.nl/vegetarische-pasta-in-
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Boekweitcrostata met geroosterde groenten, cottage cheese en hot honey
+
+![Boekweitcrostata](https://www.odin.nl/site/media/upload/images/191314_boekweitcrostata-webformaat_image-xl_20260901123004.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 1,5 uur | | hoofdgerecht · vegetarisch · glutenvrij · ovenschotel |
+
+Hartige glutenvrije taart van boekweit en amandel met geroosterde groenten, cottage cheese en pittige honing; iets voor het weekend.
+
+Bron: [odin.nl](https://www.odin.nl/recepten/-191314-boekweitcrostata-met-geroosterde-groenten-cottage-cheese-en-hot-honey/)
+
+### Ingrediënten
+
+#### Bodem
+
+- 100 g boekweitmeel {ah:628069@500g}
+- 100 g amandelmeel {ah:420734@200g}
+- 150 g (plantaardige) yoghurt of kwark {ah:396393@500g}
+- 1 el olijfolie {ah:60604 voorraad}
+- 1 tl zout
+
+#### Vulling
+
+- 1 rode ui {ah:525845@4st}
+- ½ pompoen (fles of Hokkaido) {ah:426004@1st}
+- 2 wortels {ah:101165@5st}
+- 1 zoete aardappel (paars als je die hebt) {ah:164358@3st}
+- 2 el olijfolie {ah:60604 voorraad}
+- 1 tl gedroogde Italiaanse kruiden {ah:216628 voorraad}
+- 1 bakje cottage cheese (200 g) {ah:595368@1st}
+- 2 el fijne mosterd {ah:602498 voorraad}
+- 1 ei {ah:127231@6st}
+- 1 el maan- en sesamzaad {ah:223824 voorraad}
+- zout en peper naar smaak
+
+#### Hot honey
+
+- 150 g vloeibare honing {ah:410389@350g}
+- 1 rode peper {ah:387770@3st}
+- 1 el citroensap {ah:577892@3st}
+
+### Bereiding
+
+1. Verwarm de oven voor op 200 °C.
+2. Kneed {100 g} boekweitmeel, {100 g} amandelmeel, {1 tl} zout, {150 g} yoghurt of kwark en {1 el} olijfolie tot een samenhangend deeg. Te nat: wat extra boekweitmeel; te droog: een beetje water. Laat het in folie 30 minuten rusten in de koelkast.
+3. Snijd {1} rode ui in ringen, {½} pompoen in dunne parten, {2} wortels in stukjes en {1} zoete aardappel in plakken. Meng met {2 el} olijfolie, {1 tl} Italiaanse kruiden, zout en peper en rooster 20 minuten op een bakplaat tot ze beetgaar zijn.
+4. Verwarm {150 g} honing met {1} rode peper in ringetjes en {1 el} citroensap in een pannetje. Zet opzij.
+5. Rol het deeg uit tussen twee vellen bakpapier en haal het bovenste vel eraf. Scheurt het, druk het dan dicht; dat hoort bij dit deeg.
+6. Meng {1} bakje cottage cheese met {2 el} mosterd en smeer dit op de bodem, met 5 cm vrije rand. Verdeel de groenten erover en vouw de rand naar binnen. Bestrijk het deeg met {1} losgeklopt ei en bestrooi met {1 el} maan- en sesamzaad.
+7. Bak 30–40 minuten tot het deeg goudbruin is en giet de hot honey er in straaltjes over.
+
+### Tips
+
+- Lekker met een frisse salade, bijvoorbeeld met peer.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
