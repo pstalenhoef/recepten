@@ -1,6 +1,10 @@
 {
  "date": "2026-10-26",
  "items": {
+  "51774": {
+   "p": 0.98,
+   "n": "AH Biologisch Zuurkool naturel"
+  },
   "58082": {
    "p": 2.6,
    "n": "AH Biologisch Roomboter ongezouten"
@@ -8,6 +12,10 @@
   "60604": {
    "p": 5.39,
    "n": "AH Biologisch Olijfolie extra vierge"
+  },
+  "61009": {
+   "p": 1.34,
+   "n": "AH Biologisch Volle melk"
   },
   "66113": {
    "p": 1.43,
@@ -73,6 +81,10 @@
    "p": 0.89,
    "n": "AH Terra Biologisch kidneybonen"
   },
+  "169198": {
+   "p": 2.06,
+   "n": "AH Biologisch Iets kruimige aardappelen"
+  },
   "185202": {
    "p": 1.12,
    "n": "AH Biologisch Courgette"
@@ -125,6 +137,10 @@
    "p": 2.99,
    "n": "Verstegen Italiaanse kruiden"
   },
+  "216647": {
+   "p": 3.99,
+   "n": "Verstegen Kruidnagel gemalen"
+  },
   "223824": {
    "p": 3.39,
    "n": "Verstegen Maanzaad"
@@ -168,6 +184,10 @@
   "387770": {
    "p": 0.49,
    "n": "AH Rode peper"
+  },
+  "388293": {
+   "p": 1.55,
+   "n": "AH Ketjap manis"
   },
   "389076": {
    "p": 2.69,
@@ -221,9 +241,17 @@
    "p": 2.42,
    "n": "Go-Tan Biologische kokosmelk"
   },
+  "450146": {
+   "p": 0.99,
+   "n": "AH Sambal Oelek"
+  },
   "476742": {
    "p": 1.25,
    "n": "AH Biologisch Rucola"
+  },
+  "477161": {
+   "p": 0.79,
+   "n": "AH Nootmuskaat"
   },
   "478232": {
    "p": 2.79,
@@ -264,6 +292,10 @@
   "556739": {
    "p": 0.62,
    "n": "AH Biologisch Tomatenpuree"
+  },
+  "564795": {
+   "p": 2.69,
+   "n": "AH Terra Plantaardig gehakt"
   },
   "577547": {
    "p": 1.69,

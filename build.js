@@ -178,7 +178,11 @@ const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.cla
 // Hoeveelheden: herkennen, schalen naar aantal personen en netjes tonen
 const FRAC = { "½": .5, "¼": .25, "¾": .75 };
 const UNITS = { g: ["g", 1], gram: ["g", 1], kg: ["g", 1000], ml: ["ml", 1], l: ["ml", 1000], el: ["el", 1], tl: ["tl", 1] };
-const num = s => FRAC[s] ?? parseFloat(s.replace(",", "."));
+// "300", "2,5", "½" en gemengd "1½"
+const num = s => {
+  const f = FRAC[s.slice(-1)] || 0, whole = f ? s.slice(0, -1) : s;
+  return (whole ? parseFloat(whole.replace(",", ".")) : 0) + f;
+};
 function fmtQty(x, unit) {
   if (unit === "g" || unit === "ml") return String(x >= 20 ? Math.round(x / 5) * 5 : Math.max(1, Math.round(x)));
   if (x < .375) return "¼";
@@ -319,7 +323,7 @@ for (const [h2, ...rest] of groups) {
     // Hoeveelheid vooraan ("300 g", "½", "2,5 el") in een span zetten zodat die kan meeschalen
     const first = li.firstChild;
     const m = first && first.nodeType === 3 &&
-      first.nodeValue.match(/^(\\d+(?:[.,]\\d+)?|[½¼¾])(?![\\d.,]*\\s*[–-]\\s*\\d)(\\s*)([^\\s,]*)/);
+      first.nodeValue.match(/^(\\d+(?:[.,]\\d+)?[½¼¾]?|[½¼¾])(?![\\d.,]*\\s*[–-]\\s*\\d)(\\s*)([^\\s,]*)/);
     if (m) {
       const qty = makeQty(m[1], m[2], m[3]);
       first.nodeValue = first.nodeValue.slice(qty.textContent.length);
@@ -407,7 +411,7 @@ for (const [h2, ...rest] of groups) {
     const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT), nodes = [];
     for (let n; (n = walker.nextNode());) nodes.push(n);
     for (const n of nodes) {
-      const parts = n.nodeValue.split(/\\{(\\d+(?:[.,]\\d+)?|[½¼¾])(\\s*)([^\\s}]*)\\}/);
+      const parts = n.nodeValue.split(/\\{(\\d+(?:[.,]\\d+)?[½¼¾]?|[½¼¾])(\\s*)([^\\s}]*)\\}/);
       if (parts.length === 1) continue;
       const frag = document.createDocumentFragment();
       for (let i = 0; i < parts.length; i += 4) {

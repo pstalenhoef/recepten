@@ -509,3 +509,58 @@ Bron: [odin.nl](https://www.odin.nl/recepten/-191314-boekweitcrostata-met-geroos
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Zuurkoolschotel met pittig vegetarisch gehakt
+
+![Zuurkoolschotel](https://keukenatelier.com/wp-content/uploads/2018/10/zuurkoolschotel-keukenatelier.com_-1170x777.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 4 | 50 min | Surinaams | hoofdgerecht · vegetarisch · ovenschotel · stamppot |
+
+Ovenschotel van zuurkool met pittig gekruid gehakt en een krokante laag aardappelpuree, naar Surinaams voorbeeld.
+
+Bron: [keukenatelier.com](https://keukenatelier.com/2018/10/19/zuurkoolschotel-met-pittig-vegetarisch-gehakt/)
+
+### Ingrediënten
+
+#### Zuurkool en gehakt
+
+- 500 g zuurkool {ah:51774@520g}
+- 500 g vegetarisch gehakt {ah:564795@250g}
+- 1 grote ui, gesnipperd {ah:525848@4st}
+- 2 tenen knoflook, geperst {ah:185774@20st}
+- 2 el olijfolie, plus wat om in te vetten {ah:60604 voorraad}
+- ¼ tl kruidnagelpoeder {ah:216647 voorraad}
+- 3 el tomatenketchup {ah:99132 voorraad}
+- 3 el ketjap manis {ah:388293 voorraad}
+- 1½ tl sambal oelek {ah:450146 voorraad}
+- nootmuskaat {ah:477161 voorraad}
+- zwarte peper
+
+#### Aardappelpuree
+
+- 1300 g kruimige aardappelen (met schil gewogen) {ah:169198@1000g}
+- 150 ml volle melk {ah:61009@1000ml}
+- 40 g roomboter {ah:58082 voorraad}
+- zout, peper en nootmuskaat
+
+### Bereiding
+
+1. Schil {1300 g} aardappelen en kook ze gaar. Spoel {500 g} zuurkool, knijp het vocht er goed uit en verdeel de zuurkool over een ingevette ovenschaal (ca. 33 × 23 cm).
+2. Verwarm de oven voor op 190 °C (hetelucht).
+3. Fruit {1} ui 5 minuten zacht in {2 el} olijfolie; voeg in de laatste minuut {2} tenen knoflook toe. Bak {500 g} vegetarisch gehakt erbij rul en gaar en breng op smaak met {¼ tl} kruidnagel, {3 el} ketchup, {3 el} ketjap, {1½ tl} sambal, peper en nootmuskaat. Verdeel het gehakt over de zuurkool.
+4. Zet de schaal 10–15 minuten in de oven terwijl je de puree maakt; zo wordt de zuurkool zachter. Liever met bite? Sla dit over.
+5. Stamp de aardappelen fijn met {150 ml} melk en {40 g} boter en breng op smaak met zout, peper en nootmuskaat.
+6. Verdeel de puree over het gehakt, maak het oppervlak grillig met een vork en bak 30 minuten tot de puree goudbruin en krokant is.
+
+### Tips
+
+- Minder pittig of zoet: begin met 2 el ketchup en ketjap en 1 tl sambal.
+- Variant: 200 g linzen met 300 g vegetarisch gehakt, of gewoon rundergehakt.
+- Lichter: halveer de boter en gebruik iets meer halfvolle melk. Zoete-aardappel- of bloemkoolpuree kan ook.
+- Kruidnagel weglaten kan, maar dan mis je een deel van de smaak.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
