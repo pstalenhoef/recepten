@@ -1,6 +1,10 @@
 {
  "date": "2026-10-26",
  "items": {
+  "257": {
+   "p": 1.09,
+   "n": "AH Kruiden roomkaas"
+  },
   "51774": {
    "p": 0.98,
    "n": "AH Biologisch Zuurkool naturel"
@@ -68,6 +72,14 @@
   "164358": {
    "p": 3.49,
    "n": "AH Oranje zoete aardappel"
+  },
+  "164740": {
+   "p": 2.99,
+   "n": "AH Sesamzaad"
+  },
+  "165625": {
+   "p": 3.41,
+   "n": "AH Goudse belegen geraspte kaas 50+"
   },
   "168206": {
    "p": 2.49,
@@ -225,6 +237,10 @@
    "p": 2.69,
    "n": "AH Biologisch Paprika duo"
   },
+  "419093": {
+   "p": 1.75,
+   "n": "AH Quiche & taartdeeg"
+  },
   "420734": {
    "p": 3.69,
    "n": "Molensteen Amandelmeel"
@@ -244,6 +260,10 @@
   "450146": {
    "p": 0.99,
    "n": "AH Sambal Oelek"
+  },
+  "453751": {
+   "p": 3.39,
+   "n": "AH Gegrilde groenten"
   },
   "476742": {
    "p": 1.25,

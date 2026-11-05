@@ -564,3 +564,59 @@ Bron: [keukenatelier.com](https://keukenatelier.com/2018/10/19/zuurkoolschotel-m
 ### Mijn notities
 
 - *Ruimte voor eigen aanpassingen.*
+
+## Krans-quiche met roerei en groenten
+
+![Krans-quiche met roerei en groenten](https://keukenatelier.com/wp-content/uploads/2026/03/Krans-quiche-met-roerei-en-groeonten-1170x778.jpg)
+
+| Personen | Tijd | Keuken | Labels |
+|---|---|---|---|
+| 8 | 65 min | | hoofdgerecht · vegetarisch · ovenschotel · brunch |
+
+Feestelijke quiche in de vorm van een krans, gevuld met roerei, gegrilde groenten, champignons, kruidenroomkaas en tomaatjes; mooi voor Pasen of een brunch.
+
+Bron: [keukenatelier.com](https://keukenatelier.com/2026/04/01/krans-quiche-met-roerei-en-groenten/)
+
+### Ingrediënten
+
+#### Roerei
+
+- 8 eieren {ah:127231@6st}
+- 4 el melk {ah:61009 voorraad}
+- 1½ tl gedroogde Provençaalse of Italiaanse kruiden {ah:216628 voorraad}
+- 100 g geraspte belegen kaas {ah:165625@150g}
+- 20 g boter {ah:58082 voorraad}
+- chilivlokken naar smaak {ah:234759 voorraad}
+- zout en peper
+
+#### Vulling en deeg
+
+- 1 rol quichedeeg (ca. 300 g) {ah:419093@1st}
+- 200 g gegrilde groenten (diepvries) {ah:453751@750g}
+- 125 g kastanjechampignons {ah:101132@250g}
+- 75 g kruidenroomkaas {ah:257@125g}
+- 8 smaaktomaatjes, gehalveerd {ah:67739@20st}
+- sesamzaad (optioneel) {ah:164740 voorraad}
+
+### Bereiding
+
+1. Klop {8} eieren los met {4 el} melk, {1½ tl} kruiden, chilivlokken, peper en zout. Houd een paar eetlepels apart om het deeg mee in te smeren en roer de helft van {100 g} kaas door de rest.
+2. Smelt {20 g} boter in een koekenpan en bak het eimengsel al roerend op middelhoog vuur tot het gestold en droog is. Laat op een bord helemaal afkoelen.
+3. Laat {200 g} gegrilde groenten ontdooien en snijd ze kleiner.
+4. Snijd {125 g} champignons in stukjes van 1 cm en bak ze met wat zout tot het vocht verdampt is en ze bruin zijn. Zet het vuur uit en roer {75 g} kruidenroomkaas, de groenten en wat peper erdoor.
+5. Verwarm de oven voor op 175 °C (hetelucht).
+6. Rol het deeg uit op het bakpapier en snijd het in 8 punten; laat rondom 2–3 cm van de rand heel.
+7. Verdeel het roerei in een ring over het deeg, met 2 cm vrije rand. Schep het groentemengsel erop, leg {8} gehalveerde tomaatjes erop en bestrooi met de rest van de kaas.
+8. Vouw de rand omhoog tegen de vulling, trek elke punt over de vulling en stop hem onder de rand: zo ontstaat een krans.
+9. Bestrijk het deeg met het apart gehouden ei, bestrooi eventueel met sesamzaad en bak 35–40 minuten tot de quiche goudbruin en krokant is.
+
+### Tips
+
+- Kan een dag van tevoren: in de koelkast bewaren en in de oven opwarmen.
+- Bak het roerei goed droog, dan wordt de bodem niet nat.
+- In plaats van diepvriesgroenten kun je zelf paprika, courgette, ui en aubergine roosteren.
+- Lekker met een salade met een dressing van mosterd, honing, azijn en olijfolie.
+
+### Mijn notities
+
+- *Ruimte voor eigen aanpassingen.*
